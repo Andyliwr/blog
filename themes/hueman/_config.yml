@@ -1,0 +1,111 @@
+# Menus
+menu:
+    Home: /
+    # Delete this row if you don't want categories in your header nav bar
+    Categories:
+    About: /about/index.html
+
+# Customize
+customize:
+    logo:
+        width: 80
+        height: 80
+        url: images/logo-header.svg
+    theme_color: '#006bde'
+    highlight: androidstudio
+    sidebar: left # sidebar position, options: left, right
+    thumbnail: true # enable posts thumbnail, options: true, false
+    favicon: css/images/favicon.ico # path to favicon
+    social_links: # for more icons, please see http://fontawesome.io/icons/#brand
+        github: https://github.com/Andyliwr
+        weibo: http://weibo.com/p/1005053777760803/home
+        csdn: http://blog.csdn.net/u014374031
+
+# Widgets
+widgets:
+    - recent_posts
+    - category
+    - archive
+    - tag
+    - tagcloud
+    - links
+
+# Search
+search:
+    insight: true # you need to install `hexo-generator-json-content` before using Insight Search
+    swiftype: # enter swiftype install key here
+    baidu: false # you need to disable other search engines to use Baidu search, options: true, false
+
+jsonContent:
+  meta: true
+  keywords: false # language name option 
+  dateFormat: undefined # format string 
+  pages:
+    title: true
+    slug: true
+    date: true
+    updated: true
+    comments: true
+    path: true
+    link: true
+    permalink: true
+    excerpt: true
+    keywords: true # but only if root keywords option language was set 
+    text: true
+    raw: false
+    content: false
+  posts:
+    title: true
+    slug: true
+    date: true
+    updated: true
+    comments: true
+    path: true
+    link: true
+    permalink: true
+    excerpt: true
+    keywords: true # but only if root keywords option language was set 
+    text: true
+    raw: false
+    content: false
+    categories: true
+    tags: true
+  ignore:
+    #- path/to/a/page
+    #- url/to/one/post
+    #- an-entire-category
+    #- specific.file
+    #- .ext # a file extension
+
+# Comment
+comment:
+    disqus: hexo-theme-hueman # enter disqus shortname here
+    duoshuo: # enter duoshuo shortname here
+    youyan: # enter youyan uid here
+    facebook: # enter true to enable
+    isso: # enter the domain name of your own comment isso server eg. comments.example.com
+    changyan:
+        appId: # enter the changyan appId here
+        appKey: # enter the changyan appKey here
+        on: # enter true to enable
+
+# Share
+share: default # options: jiathis, bdshare, addtoany, default
+
+# Plugins
+plugins:
+    lightgallery: true # options: true, false
+    justifiedgallery: true # options: true, false
+    google_analytics: # enter the tracking ID for your Google Analytics
+    baidu_analytics: # enter Baidu Analytics hash key
+    mathjax: false # options: true, false
+
+# Miscellaneous
+miscellaneous:
+    open_graph: # see http://ogp.me
+        fb_app_id:
+        fb_admins:
+        twitter_id:
+        google_plus:
+    links:
+        Hexo: http://hexo.io
