@@ -79,15 +79,15 @@ jsonContent:
 
 # Comment
 comment:
-    disqus: hexo-theme-hueman # enter disqus shortname here
+    disqus: # enter disqus shortname here
     duoshuo: # enter duoshuo shortname here
     youyan: # enter youyan uid here
     facebook: # enter true to enable
     isso: # enter the domain name of your own comment isso server eg. comments.example.com
     changyan:
-        appId: # enter the changyan appId here
-        appKey: # enter the changyan appKey here
-        on: # enter true to enable
+        appId: cyt9Qajra
+        appKey: 9fa82ebb86771732bc648d702ba31a4b
+        on: true
 
 # Share
 share: default # options: jiathis, bdshare, addtoany, default
@@ -97,7 +97,7 @@ plugins:
     lightgallery: true # options: true, false
     justifiedgallery: true # options: true, false
     google_analytics: # enter the tracking ID for your Google Analytics
-    baidu_analytics: # enter Baidu Analytics hash key
+    baidu_analytics: 7851ca7a86be957be994acb77639a5be # enter Baidu Analytics hash key
     mathjax: false # options: true, false
 
 # Miscellaneous
