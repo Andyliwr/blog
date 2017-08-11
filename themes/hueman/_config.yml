@@ -36,47 +36,6 @@ search:
     swiftype: # enter swiftype install key here
     baidu: false # you need to disable other search engines to use Baidu search, options: true, false
 
-jsonContent:
-  meta: true
-  keywords: false # language name option 
-  dateFormat: undefined # format string 
-  pages:
-    title: true
-    slug: true
-    date: true
-    updated: true
-    comments: true
-    path: true
-    link: true
-    permalink: true
-    excerpt: true
-    keywords: true # but only if root keywords option language was set 
-    text: true
-    raw: false
-    content: false
-  posts:
-    title: true
-    slug: true
-    date: true
-    updated: true
-    comments: true
-    path: true
-    link: true
-    permalink: true
-    excerpt: true
-    keywords: true # but only if root keywords option language was set 
-    text: true
-    raw: false
-    content: false
-    categories: true
-    tags: true
-  ignore:
-    #- path/to/a/page
-    #- url/to/one/post
-    #- an-entire-category
-    #- specific.file
-    #- .ext # a file extension
-
 # Comment
 comment:
     disqus: # enter disqus shortname here
