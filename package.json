@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.3.7"
+    "version": "3.3.8"
   },
   "dependencies": {
     "hexo": "^3.2.0",
+    "hexo-admin": "^2.2.1",
+    "hexo-baidu-url-submit": "^0.0.5",
     "hexo-deployer-ftpsync": "^0.1.1",
     "hexo-deployer-git": "^0.3.0",
     "hexo-generator-archive": "^0.1.4",
@@ -14,6 +16,7 @@
     "hexo-generator-index": "^0.2.0",
     "hexo-generator-json-content": "^3.0.1",
     "hexo-generator-tag": "^0.2.0",
+    "hexo-qiniu-sync": "^1.4.7",
     "hexo-renderer-ejs": "^0.2.0",
     "hexo-renderer-marked": "^0.2.10",
     "hexo-renderer-stylus": "^0.3.1",

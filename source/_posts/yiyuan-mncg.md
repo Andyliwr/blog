@@ -34,4 +34,8 @@ try{
 1. HighCharts画我的收益图
 <iframe style="width: 100%; height: 300px" src="http://sandbox.runjs.cn/show/asgugst0" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 查看源码请[点击这里](http://runjs.cn/code/asgugst0)
+<br>
 2. 分页插件
+<iframe style="width: 100%; height: 219px" src="http://sandbox.runjs.cn/show/lrmsauvq" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+源码请看[这里](http://runjs.cn/code/lrmsauvq)
+<p style="color: #999;margin-top: 10px;text-indent: 0">ps:&nbsp;做得比较丑，用runjs写这个demo的时候代码没保存的时候浏览器崩了>_<，runjs你还我代码....</p>
