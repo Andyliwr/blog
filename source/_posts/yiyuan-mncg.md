@@ -39,3 +39,8 @@ try{
 <iframe style="width: 100%; height: 219px" src="http://sandbox.runjs.cn/show/lrmsauvq" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 源码请看[这里](http://runjs.cn/code/lrmsauvq)
 <p style="color: #999;margin-top: 10px;text-indent: 0">ps:&nbsp;做得比较丑，用runjs写这个demo的时候代码没保存的时候浏览器崩了>_<，runjs你还我代码....</p>
+<br>
+3. 社交分享
+写了一个支持qq，微信和微博以及链接复制的分享功能，但是不支持ie8，ie9以上没问题。
+源码请看[这里](http://runjs.cn/code/8cz7q0nj)
+<iframe style="width: 100%; height: 260px" src="http://sandbox.runjs.cn/show/8cz7q0nj" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
