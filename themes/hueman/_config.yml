@@ -1,9 +1,7 @@
 # Menus
 menu:
     Home: /
-    # Delete this row if you don't want categories in your header nav bar
-    Categories:
-    About: /about/index.html
+    poetry: /poetry
 
 # Customize
 customize:
