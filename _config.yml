@@ -63,14 +63,14 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hueman
+theme: landscape
 
 # 主动向百度提交链接申请
-baidu_url_submit:
-  count: 2 ## 提交最新的一个链接
-  host: https://andyliwr.github.io ## 在百度站长平台中注册的域名
-  token: XmSLH5Ii70tIv7ri ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
-  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+# baidu_url_submit:
+#   count: 2 ## 提交最新的一个链接
+#   host: https://andyliwr.github.io ## 在百度站长平台中注册的域名
+#   token: XmSLH5Ii70tIv7ri ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+#   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
 
 # 七牛
 #七牛云存储设置
@@ -88,25 +88,25 @@ baidu_url_submit:
 ##image/js/css  子参数folder为不同静态资源种类的目录名称，一般不需要改动
 ##image.extend  这是个特殊参数，用于生成缩略图或加水印等操作。具体请参考http://developer.qiniu.com/docs/v6/api/reference/fop/image/ 
 ##              可使用基本图片处理、高级图片处理、图片水印处理这3个接口。例如 ?imageView2/2/w/500 即生成宽度最多500px的缩略图
-qiniu:
-  offline: false
-  sync: true
-  bucket: andyliwr-server
-  #secret_file: sec/qn.json or C:
-  access_key: pz1XaE-7IPSWuJjLTrjH3Rv9O5v0hj510O1ttMm6
-  secret_key: HB_zxxzxJ3YpKFAD3PC7egJvgx4yOp3t6Fg7xdYP
-  dirPrefix: blog
-  urlPrefix: https://olpkwt43d.qnssl.com/blog
-  up_host: https://up-z2.qbox.me
-  local_dir: static
-  update_exist: true
-  image: 
-    folder: images
-    extend: 
-  js:
-    folder: js
-  css:
-    folder: css
+# qiniu:
+#   offline: false
+#   sync: true
+#   bucket: andyliwr-server
+#   #secret_file: sec/qn.json or C:
+#   access_key: pz1XaE-7IPSWuJjLTrjH3Rv9O5v0hj510O1ttMm6
+#   secret_key: HB_zxxzxJ3YpKFAD3PC7egJvgx4yOp3t6Fg7xdYP
+#   dirPrefix: blog
+#   urlPrefix: https://olpkwt43d.qnssl.com/blog
+#   up_host: https://up-z2.qbox.me
+#   local_dir: static
+#   update_exist: true
+#   image: 
+#     folder: images
+#     extend: 
+#   js:
+#     folder: js
+#   css:
+#     folder: css
 
 plugins:
   # - hexo-qiniu-sync

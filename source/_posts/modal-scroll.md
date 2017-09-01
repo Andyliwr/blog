@@ -6,7 +6,8 @@ tags: 工作, bugs, 前端
 
 ### 前言
 开发中我们经常会碰到这种需求---自定义弹窗，那么如何创建一个正确的弹窗呢？
-![弹出框](https://olpkwt43d.qnssl.com/blog/images/modal.png)
+<!-- ![弹出框](https://olpkwt43d.qnssl.com/blog/images/modal.png) -->
+<img src="https://olpkwt43d.qnssl.com/blog/images/modal.png" alt="弹出框" style="  width: 70%;margin: 20px auto;" />
 ### 考虑的方面
 #### 1. 定位
 弹窗一般都需要垂直水平居中，也许通过flex或者transform能够很快的实现垂直水平居中，但是ie下就炸了，下面我介绍一种垂直水平居中的技巧---使用三层dom来实现垂直水平居中
