@@ -6,13 +6,13 @@ tags: 同花顺
 
 ### 前言
 开发中我们经常会碰到这种需求---自定义弹窗，那么如何创建一个正确的弹窗呢？
-<!-- ![弹出框](https://olpkwt43d.qnssl.com/blog/images/modal.png) -->
-<img src="https://olpkwt43d.qnssl.com/blog/images/modal.png" alt="弹出框" style="  width: 70%;margin: 20px auto;" />
+<img class="top-img" src="https://olpkwt43d.qnssl.com/blog/images/modal.png" alt="弹出框" style="width: 70%;margin: 20px auto;" />
+
 ### 考虑的方面
 #### 1. 定位
 弹窗一般都需要垂直水平居中，也许通过flex或者transform能够很快的实现垂直水平居中，但是ie下就炸了，下面我介绍一种垂直水平居中的技巧---使用三层dom来实现垂直水平居中
 ##### html
-```
+```html
 <div class="center-outside">
   <div class="center-middle">
     <div class="center-inner">xxx</div>
@@ -20,7 +20,7 @@ tags: 同花顺
 </div>
 ```
 ##### css
-```
+```css
 .center-outside {
 	position: fixed;
 	top: 0px;
@@ -53,4 +53,4 @@ tags: 同花顺
 2. 大于一屏的页面最右边会有一个滚动条，页面渲染的时候会忽略滚动条的宽度(15px)，但position:fixed; height: 100%; width: 100%的布局不会忽略这个宽度，导致打开弹窗的一瞬间页面会像右移动15px。解决方案是在弹窗打开时设置body的padding-right为15px; [demo地址](http://sandbox.runjs.cn/show/9fiq311v)
 3. 弹窗弹出后点击关闭按钮或者背景框可以关闭弹窗，并且页面恢复可滚动状态
 
-<script type="text/javascript" src="http://runjs.cn/gist/9fiq311v"></script>
+具体的代码请查看[demo](http://runjs.cn/code/9fiq311v)
