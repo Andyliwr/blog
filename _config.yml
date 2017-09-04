@@ -78,14 +78,14 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   # prod
-  # type: sftp
-  # host: 118.89.148.108
-  # user: ubuntu
-  # remotePath: /home/ubuntu/www/index/
-  # port: 22
-  # privateKey: /home/andyliwr/.ssh/id_rsa
+  type: sftp
+  host: 118.89.148.108
+  user: ubuntu
+  remotePath: /home/ubuntu/www/index/
+  port: 22
+  privateKey: /home/andyliwr/.ssh/id_rsa
   # git
-  type: git
-  repo: https://github.com/Andyliwr/Andyliwr.github.io.git
-  branch: master
-  message: 网站更新：{{ now("YYYY-MM-DD HH:mm:ss")}}
+  # type: git
+  # repo: https://github.com/Andyliwr/Andyliwr.github.io.git
+  # branch: master
+  # message: 网站更新：{{ now("YYYY-MM-DD HH:mm:ss")}}
