@@ -2,7 +2,9 @@
 menu:
   首页: /
   归类: /archives
-  # 心声: /whisper
+  音乐: /music
+  涂鸦: /paint
+  记事: /article
 # rss: /atom.xml
 
 # Content

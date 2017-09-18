@@ -2,12 +2,26 @@
   <div id="banner"></div>
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
+      <%
+        var title = '';
+        var subtitle = '';
+        if(page.title === "音乐"){
+          title = '音乐列表'
+          subtitle = '一杯敬明天，一杯敬过往'
+        }else if(page.title === "记事列表"){
+          title = '记事'
+          subtitle = '等自己老了，搬凳子做在自家屋檐下，这些成了最宝贵的回忆'
+        }else if(page.title === "涂鸦列表"){
+          title = '涂鸦'
+          subtitle = '爱上一个人，也会爱上她喜欢的'
+        }
+      %>
       <h1 id="logo-wrap">
-        <a href="<%- url_for() %>" id="logo"><%= config.title %></a>
+        <a href="<%- url_for() %>" id="logo"><%= title || config.title %></a>
       </h1>
       <% if (theme.subtitle){ %>
         <h2 id="subtitle-wrap">
-          <a href="<%- url_for() %>" id="subtitle"><%= theme.subtitle %></a>
+          <a href="<%- url_for() %>" id="subtitle"><%= subtitle || theme.subtitle %></a>
         </h2>
       <% } %>
     </div>

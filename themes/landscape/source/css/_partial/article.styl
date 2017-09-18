@@ -60,10 +60,11 @@
     margin-top: line-height
     margin-bottom: line-height
   img, video
-    max-width: 100%
+    max-width: 80%
+    max-height: 300px
     height: auto
     display: block
-    margin: auto
+    margin: 10px auto
   iframe
     border: none
   table
@@ -355,3 +356,7 @@ $article-gallery-ctrl
   &:before
     content: "\f054"
     right: 15px*/
+
+@media(max-width: 768px)
+ .article-entry img
+   max-width: 100%
