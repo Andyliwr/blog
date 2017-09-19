@@ -7,6 +7,12 @@ date: 2017-09-18 16:43:45
 <div class="container 2017">
     <div class="header"><i class="icon-bookmark"></i>记事</div>
     <div class="content">
+	<div class="link-item">
+        <a href="posts/the_feelling_loving.html" target="_blank">
+          <span class="title">我是时候离开了</span>
+          <span class="des">我从来都是只是个指路人，只不过现在导航结束了而已</span>
+        </a>
+      </div>
       <div class="link-item">
         <a href="posts/xi_da_li_bie.html" target="_blank">
           <span class="title">离别西大</span>
