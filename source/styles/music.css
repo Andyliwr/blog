@@ -1,0 +1,25 @@
+.container{
+
+}
+.container .music{
+    box-shadow: 0 0 1px 1px #b6d5dd;
+    overflow: hidden;
+}
+.container .music a{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    overflow: hidden;
+    display: inline-block;
+}
+.container .music a>img{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    max-height: 100%;
+    max-width: 100%;
+}
+.container .music .des{
+    display: inline-block;
+}
