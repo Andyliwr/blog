@@ -2,8 +2,8 @@
 menu:
   首页: /
   归类: /archives
-  音乐: /music
-  涂鸦: /paint
+  # 音乐: /music
+  # 涂鸦: /paint
   记事: /article
 # rss: /atom.xml
 
