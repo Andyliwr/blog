@@ -7,7 +7,13 @@ date: 2017-09-18 16:43:45
 <div class="container 2017">
     <div class="header"><i class="icon-bookmark"></i>记事</div>
     <div class="content">
-	<div class="link-item">
+	  <div class="link-item">
+        <a href="posts/ru_ni_yi_ban_de_ren.html" target="_blank">
+          <span class="title">我希望有个如你一般的人</span>
+          <span class="des">如山间清爽的风，如古城温暖的光</span>
+        </a>
+      </div>
+	  <div class="link-item">
         <a href="posts/the_feelling_loving.html" target="_blank">
           <span class="title">我是时候离开了</span>
           <span class="des">我从来都是只是个指路人，只不过现在导航结束了而已</span>
