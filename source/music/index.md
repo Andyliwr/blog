@@ -25,6 +25,12 @@ date: 2017-09-18 16:42:21
 <div class="container 2017">
     <div class="header"><i class="icon-bookmark"></i>惨不忍睹的自唱</div>
     <div class="content">
+        <div class="link-item">
+            <a href="http://node.kg.qq.com/play?s=5HpbRD5HGnaXM5Mk&g_f=personal" target="_blank">
+            <span class="title">消愁</span>
+            <span class="des">一杯敬自由，一杯敬过往</span>
+            </a>
+        </div>
 		<div class="link-item">
             <a href="http://node.kg.qq.com/play?s=UpHEYgUpXw2hkUpn&g_f=personal" target="_blank">
             <span class="title">知足</span>

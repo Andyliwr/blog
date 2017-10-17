@@ -7,6 +7,18 @@ date: 2017-09-18 16:43:45
 <div class="container 2017">
     <div class="header"><i class="icon-bookmark"></i>记事</div>
     <div class="content">
+    <div class="link-item">
+        <a href="posts/guo_qing_1.html" target="_blank">
+          <span class="title">国庆第一天</span>
+          <span class="des">西湖之旅</span>
+        </a>
+      </div>
+      <div class="link-item">
+        <a href="posts/guo_qing_2.html" target="_blank">
+          <span class="title">国庆第二天</span>
+          <span class="des">铜仁，我到了</span>
+        </a>
+      </div>
 	  <div class="link-item">
         <a href="posts/ru_ni_yi_ban_de_ren.html" target="_blank">
           <span class="title">我希望有个如你一般的人</span>
