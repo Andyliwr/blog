@@ -21,7 +21,8 @@ $code-block
   border-width: 1px 0
   overflow: auto
   color: highlight-foreground
-  line-height: font-size * line-height
+  line-height: font-size * line-height * 0.8
+  -webkit-overflow-scrolling : touch
 
 $line-numbers
   color: #666
@@ -42,6 +43,19 @@ $line-numbers
       padding: 0
   .highlight
     @extend $code-block
+
+    &::-webkit-scrollbar
+      width: 8px
+      height: 8px
+
+    &::-webkit-scrollbar-thumb
+        background-color: #999
+        border-radius: 6px
+
+    &::-webkit-scrollbar-track
+        background-color: #ddd
+        border-radius: 6px
+
     pre
       border: none
       margin: 0
@@ -60,12 +74,14 @@ $line-numbers
       margin-bottom: 1em
       a
         float: right
+    .gutter
+      display: none
     .gutter pre
       @extend $line-numbers
       text-align: right
       padding-right: 20px
     .line
-      height: font-size * line-height
+      height: font-size * line-height * 0.8
     .line.marked
       background: highlight-selection
   .gist
