@@ -36,7 +36,21 @@
 </article>
 
 <% if (!index && post.comments && config.gitment){ %>
-<section id="comments">
-  
-</section>
+  <section id="comments">
+  </section>
+  <script>
+    window.onload = function(){
+      var pageId = document.querySelector('.article').id
+      var gitment = new Gitment({
+        // id: pageId, // 可选。默认为 location.href
+        owner: 'Andyliwr',
+        repo: 'Andyliwr.github.io',
+        oauth: {
+          client_id: '2790c4c9522929c268a5',
+          client_secret: '24c06ea2621f6e1f1a833119a8cc87d1bc272242',
+        },
+      })
+      gitment.render('comments')
+    }
+  </script>
 <% } %>
