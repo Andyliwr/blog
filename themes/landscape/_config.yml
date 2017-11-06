@@ -32,7 +32,7 @@ show_count: false
 
 # Miscellaneous
 google_analytics:
-favicon: ./favicon.ico
+favicon: http://fs.andylistudio.com/favicon.ico
 twitter:
 google_plus:
 fb_admins:

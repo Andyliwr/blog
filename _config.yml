@@ -74,6 +74,9 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: landscape
 
+# 评论
+gitment: true
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
