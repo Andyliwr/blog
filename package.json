@@ -6,6 +6,7 @@
     "version": "3.4.0"
   },
   "dependencies": {
+    "hexo-baidu-url-submit": "^0.0.5",
     "hexo-deployer-git": "^0.1.0",
     "hexo-deployer-sftp": "^0.1.0",
     "hexo-generator-archive": "^0.1.4",
