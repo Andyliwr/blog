@@ -57,9 +57,10 @@ datadir=D:\mysql\data
 	```
 
 ### 史上最坑集合
-1. 由于修改mysql编码很频繁，导致`mysql`一直重启又关闭，最后一次重启时竟然不干了，直接报`The mysql service on Local computer started and then stopped`，我又开了漫天盖地的百度，`google`，可是愣是没找到一种解决方案（重启电脑都试过两次了）。于是开始试着去读mysql的错误日志，发现自己在修改编码的时候在my.ini文件的[mysqld]下面加入了`character_set_database=utf8`，但是`mysql`并不能识别这个配置。于是我将这一行配置删除掉。并且在注册表删除记录---`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MySQL`。重启`mysql`，这次报了今天早上遇到的错误`“The mysql service could not be started. The service did not report an error”`，于是只能删除data\目录下的所有数据，使用`mysqld --initialize-insecure`重新初始化一遍，最后才启动成功，我还得重新创建`root`用户。真心别坑我啊，难受>_<
+**1、The mysql service on Local computer started and then stopped**
+由于修改mysql编码很频繁，导致`mysql`一直重启又关闭，最后一次重启时竟然不干了，直接报`The mysql service on Local computer started and then stopped`，我又开了漫天盖地的百度，`google`，可是愣是没找到一种解决方案（重启电脑都试过两次了）。于是开始试着去读mysql的错误日志，发现自己在修改编码的时候在my.ini文件的[mysqld]下面加入了`character_set_database=utf8`，但是`mysql`并不能识别这个配置。于是我将这一行配置删除掉。并且在注册表删除记录---`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MySQL`。重启`mysql`，这次报了今天早上遇到的错误`“The mysql service could not be started. The service did not report an error”`，于是只能删除data\目录下的所有数据，使用`mysqld --initialize-insecure`重新初始化一遍，最后才启动成功，我还得重新创建`root`用户。真心别坑我啊，难受>_<
 
-2. windows mysql不支持中文
+**2. windows mysql不支持中文**
 修改`my.ini`配置文件
 ```
 [mysqld] 
@@ -83,6 +84,18 @@ set character_set_server=utf8;
 set character_set_client=gbk;
 set character_set_connection=gbk;
 ```
+
+**3、分组查询错误**---`this is incompatible with sql_mode=only_full_group_by`
+
+在mysql命令行模式下输入一下代码：
+```
+SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+```
+不行的话就执行这句：
+```
+set @@sql_mode ='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+```
+最终使用`select @@sql_mode`查看取得的值中是否还有`ONLY_FULL_GROUP_BY`
 
 是不是觉得博主是个热爱分享的好人？哈哈~
 最后如果你有啥疑问，欢迎写信到我的邮箱(andyliwr@outlook.com) 
