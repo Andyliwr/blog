@@ -1,0 +1,5 @@
+Host github.com
+    User git
+    StrictHostKeyChecking no
+    IdentityFile D:\\PROJECT\\blog\\.travis\\id_rsa_travis
+    IdentitiesOnly yes

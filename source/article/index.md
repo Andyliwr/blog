@@ -8,6 +8,12 @@ date: 2017-09-18 16:43:45
     <div class="header"><i class="icon-bookmark"></i>记事</div>
     <div class="content">
       <div class="link-item">
+        <a href="posts/kemuer.html" target="_blank">
+          <span class="title">科目二挂了</span>
+          <span class="des">我是不是一直都只是看起来很努力</span>
+        </a>
+      </div>
+      <div class="link-item">
         <a href="posts/xi_da_li_bie.html" target="_blank">
           <span class="title">离别西大</span>
           <span class="des">含着泪，我一读再读。却不得不承认，青春是一本太过仓促的书</span>
