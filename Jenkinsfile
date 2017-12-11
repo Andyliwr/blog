@@ -4,8 +4,7 @@ pipeline {
     stage('build') {
       steps {
         echo 'asdasd'
-        sh '''ls
-node -v'''
+        sh 'ls && node -v'
       }
     }
   }
