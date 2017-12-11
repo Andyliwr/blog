@@ -1,10 +1,15 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'node'
+    }
+    
+  }
   stages {
     stage('build') {
       steps {
         echo 'asdasd'
-        sh 'source /home/ubuntu/nvm/nvm.sh && node -v && cnpm -v && cnpm install'
+        sh 'ls && node -v && npm install -g cnpm --registry=https://registry.npm.taobao.org'
       }
     }
   }
