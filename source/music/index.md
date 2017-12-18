@@ -14,7 +14,7 @@ date: 2017-09-18 16:42:21
             </a>
         </div>
         <div class="link-item">
-            <a href="posts/xiang_wo_zhe_yang.html" target="_blank">
+            <a href="https://y.qq.com/n/yqq/song/00375L600p9sxv.html?ADTAG=baiduald&play=1" target="_blank">
             <span class="title">向我这样的人</span>
             <span class="des">像我这样莫名其妙的人，会不会有人心疼</span>
             </a>
@@ -25,6 +25,12 @@ date: 2017-09-18 16:42:21
 <div class="container 2017">
     <div class="header"><i class="icon-bookmark"></i>惨不忍睹的自唱</div>
     <div class="content">
+        <div class="link-item">
+            <a href="http://node.kg.qq.com/play?s=5HpbRD5HGnaXM5Mk&g_f=personal" target="_blank">
+            <span class="title">我不愿让你一个人</span>
+            <span class="des">只求命运带你去一段全新的旅程，往幸福的天涯飞奔</span>
+            </a>
+        </div>
         <div class="link-item">
             <a href="http://node.kg.qq.com/play?s=5HpbRD5HGnaXM5Mk&g_f=personal" target="_blank">
             <span class="title">消愁</span>
@@ -40,7 +46,7 @@ date: 2017-09-18 16:42:21
 	    <div class="link-item">
             <a href="http://kg.qq.com/node/play?s=dMayFldMF9MkzdM9&shareuid=609b94832c28378d&topsource=a0_pn201001003_z11_u26969506_l0_t1505748509__" target="_blank">
             <span class="title">童话</span>
-            <span class="des">世界上有很多东西都能通过艰苦奋斗得到，，唯独爱不行</span>
+            <span class="des">世界上有很多东西都能通过艰苦奋斗得到，唯独爱不行</span>
             </a>
 		</div>
     </div>
