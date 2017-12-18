@@ -18,7 +18,7 @@ tags:
 以上问题还没看明白的话，我这儿还有个两个的demo，掏出手机扫描下看看吧。左边是错误的demo，右边是正确的demo。点击”1000元起始投资“后再点击”我已开户“才能看到登陆弹窗哦~
 <div style="overflow: hidden; text-align: center"><div style="display: inline-block; width: 200px;"><img src="https://olpkwt43d.qnssl.com/blog/post20170912_01.png"/><p style="text-align: center">错误的demo</p></div><div style="display: inline-block; width: 200px; margin-left: 40px"><img src="https://olpkwt43d.qnssl.com/blog/post20170912_02.png"/><p style="text-align: center">正确的demo</p></div></div>
 
-### **bug产生的原因**
+#### **bug产生的原因**
 iphone在键盘弹出的时候，页面的高度为屏幕高度减去键盘的高度，当input元素失去焦点，键盘的收起的0.5s内弹出了alert框，js被停止执行，并且弹窗的fixed属性失效了。由于透明的黑色背景也是采用的fixed定位，所以在fixed失效的时透明的黑色背景的高度不会随着body的高度变大(键盘往下收缩，腾出来的空间显示页面)而变大。
 <div style="text-align: center"><img style="display: inline-block; width: 300px" src="https://olpkwt43d.qnssl.com/blog/post20170912_03.png"/> <img style="display: inline-block; width: 300px; margin-left: 30px;"  src="https://olpkwt43d.qnssl.com/blog/post20170912_05.png"/></div>
 根据以上分析，导致这种现象的有两个原因:
@@ -147,5 +147,5 @@ function iphoneDelayDone(callback) {
 }
 ```
 
-最后贴一个正确效果的视频，诸位要是有啥不懂，欢迎写邮件到andyliwr@outlook.com与我讨论。
+最后贴一个正确效果的视频。
 <video style="height: 400px" src="https://olpkwt43d.qnssl.com/blog/post20170912_v01.mp4" controls="controls" height="400px">

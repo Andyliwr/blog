@@ -6,7 +6,7 @@ tags:
  - 毕设
 ---
 
-### 前言
+#### 前言
 有时候想法太多也不是个好事，最近想做的项目有三个：
 1. 上线毕设项目---[微书](https://github.com/AndyliStudio/graduationDesign)
 2. 实现一个博客的评论系统---[wecomment](https://github.com/andyliwr/wecomment)
@@ -16,7 +16,7 @@ tags:
 学习一个新框架最好的方法就是去看它的官网，初次打开`scrapy`的官网，眼前一亮，让自己瞬间但觉到要是能掌握这门武技就能变成无敌黑客。
 ![scrapy官网](http://ouizhbgin.bkt.clouddn.com/blog/2017/10/28/scrapy_office.png)
 
-### 安装`scrapy`
+#### 安装`scrapy`
 1. **windows下安装**
 python安装包的时候依赖关系复杂，有时候存粹使用`pip install xxx`并不能安装成功，我们得找条捷径。参考官网给的安装教程，我选择了使用[anaconda](https://anaconda.org)。可是国内访问国外网站很慢，而且奇葩的时`anaconda`还很大，大概400多M.。当我发现我睡了一觉起来还没有下载成功的时候，果断点击了`取消下载`。这里给大家推荐两个镜像：
 	+ 清华大学`anaconda`镜像 --- [https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)，如不能访问，请使用下面一个
@@ -37,7 +37,7 @@ linux下的安装和window下类似，只是是下载`xxx.sh`文件，最后就�
 sudo ./xxx.sh
 ```
 
-### `scrapy`创建以及运行项目
+#### `scrapy`创建以及运行项目
 创建项目，在终端中输入`scrapy startproject first_spider`，创建完成之后项目结构如下：
 ```
 tutorial/
@@ -102,4 +102,4 @@ scrapy crawl quotes
 ```
 
 如此一个最简单的爬虫就写好了，有木有很简单？
-在接下来的文章，我将继续介绍scrapy的进阶内容，敬请期待。如果你有任何的疑问，欢迎写邮件到我的邮箱(andyliwr@outlook.com)
+在接下来的文章，我将继续介绍scrapy的进阶内容，敬请期待~

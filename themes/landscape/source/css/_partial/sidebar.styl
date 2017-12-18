@@ -8,6 +8,9 @@ else
   line-height: line-height
   word-wrap: break-word
   font-size: 0.9em
+  li.tag-list-item
+    display inline-block
+    margin-right 10px
   ul, ol
     list-style: none
     margin: 0
@@ -15,6 +18,14 @@ else
       margin: 0 20px
     ul
       list-style: disc
+    .archive-list
+      display flex
+      flex-flow row wrap
+      justify-content flex-start
+    li.archive-list-item
+      display inline-block
+      width 33.3%
+      text-align center
     ol
       list-style: decimal
 

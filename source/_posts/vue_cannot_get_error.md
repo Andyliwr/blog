@@ -7,14 +7,14 @@ tags:
 ---
 
 今天出一个新需求，拿到别人的代码启动`vue`之后总是报`cannot GET /`的错误。下面是我解决的方法：
-### 现象
+#### 现象
 1. 浏览器中无法呈现已有页面,并且在浏览器控制台中报404错误
 
 ![chrom报错](https://olpkwt43d.qnssl.com/blog/post03/error.png)
 2. `npm run dev`命令行窗口没有报错
 
 ![控制台输出](https://olpkwt43d.qnssl.com/blog/post03/console.png)
-### 原因
+#### 原因
 网上查了下，有人说是路由配置问题（开启了`history`模式，而`history`模式需要服务端支持），然后我的代码没有开启`history`模式。于是找同事要了份代码全文对比，发现是配置信息导致:
 
 ![webpack配置](https://olpkwt43d.qnssl.com/blog/post03/code.png)

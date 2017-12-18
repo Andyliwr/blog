@@ -7,7 +7,7 @@ hexo是一个优秀的博客工具，通过将markdown文件转化成静态页�
 
 下面来介绍如何使用hexo:
 
-### 1. **安装node.js**
+#### 1. **安装node.js**
 
 点击进入[node.js官网](https://nodejs.org/en/)
 
@@ -17,7 +17,7 @@ hexo是一个优秀的博客工具，通过将markdown文件转化成静态页�
 
 安装好了之后在cmd中输入`node -v`来测试node是否安装成功.
 
-### 2. **安装hexo**
+#### 2. **安装hexo**
 ```bash
 npm install -g hexo-cli
 ```
@@ -29,14 +29,14 @@ hexo
 
 ![](https://olpkwt43d.qnssl.com/blog/post001/post-1-02.png)
 
-### 3. **安装博客依赖**
+#### 3. **安装博客依赖**
 
 在终端中输入：
 ```bash
 cd BehavioralGeneticsSQL-blog
 npm install
 ```
-### 3. **启动博客**
+#### 3. **启动博客**
 ```bash
 hexo server
 ```
@@ -45,7 +45,7 @@ hexo server
 
 ![](https://olpkwt43d.qnssl.com/blog/post001/post-1-06.png)
 
-### 4. **新建博客文章**
+#### 4. **新建博客文章**
 ```bash
 // 新建一篇文章
 hexo new "文章标题"
@@ -60,7 +60,7 @@ hexo new "文章标题"
 
 编辑完刷新页面就能看到改动。
 
-### 5. **发布博客**
+#### 5. **发布博客**
 
 在终端输入：
 ```bash
