@@ -12,7 +12,7 @@ branches:
 # 执行isntall前需要执行的命令
 before_install:
   - openssl aes-256-cbc -K $encrypted_521cf84382a5_key -iv $encrypted_521cf84382a5_iv
-  -in id_rsa_travis.enc -out C:\\Users\\andyliwr\\.ssh\\id_rsa_travis -d
+  -in .travis/id_rsa_travis.enc -out C:\\Users\\andyliwr\\.ssh\\id_rsa_travis -d
 
 # 改变文件权限
   - chmod 600 C:\\Users\\andyliwr\\.ssh\\id_rsa_travis
