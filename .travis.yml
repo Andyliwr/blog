@@ -2,7 +2,7 @@
 language: node_js
 
 # 使用的node版本
-node_js: 8.4.0
+node_js: 8.0.0
 
 # 仓库的分支
 branches:
@@ -11,16 +11,16 @@ branches:
 
 # 执行isntall前需要执行的命令
 before_install:
-  - openssl aes-256-cbc -K $encrypted_521cf84382a5_key -iv $encrypted_521cf84382a5_iv
-  -in .travis/id_rsa_travis.enc -out C:\\Users\\andyliwr\\.ssh\\id_rsa_travis -d
+- openssl aes-256-cbc -K $encrypted_d839c941aa8f_key -iv $encrypted_d839c941aa8f_iv
+  -in id_rsa_travis.enc -out ~\/ssh/id_rsa_travis -d
 
 # 改变文件权限
-  - chmod 600 C:\\Users\\andyliwr\\.ssh\\id_rsa_travis
+  - chmod 600 ~\/ssh/id_rsa_travis
 
 # 配置 ssh
   - eval $(ssh-agent)
-  - ssh-add C:\\Users\\andyliwr\\.ssh\\id_rsa_travis
-  - cp .travis/ssh_config C:\\Users\\andyliwr\\.ssh\\config
+  - ssh-add ~\/ssh/id_rsa_travis
+  - sudo cp .travis/ssh_config ~\/.ssh/config
 
 # 配置git 的个人信息
   - git config --global user.name 'andyliwr'

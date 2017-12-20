@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.andylistudio.com
+url: https://andyliwr.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -78,11 +78,60 @@ theme: landscape
 gitment: true
 
 # 自动提交百度站点地址
+# baidu_url_submit:
+#   count: 1 ## 提交最新的一个链接
+#   host: www.andylistudio.com ## 在百度站长平台中注册的域名
+#   token: XmSLH5Ii70tIv7ri ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+#   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
 baidu_url_submit:
   count: 1 ## 提交最新的一个链接
-  host: www.andylistudio.com ## 在百度站长平台中注册的域名
+  host: andyliwr.github.io ## 在百度站长平台中注册的域名
   token: XmSLH5Ii70tIv7ri ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+
+jsonContent:
+  meta: true
+  keywords: false # language name option
+  dateFormat: undefined # format string
+  pages:
+    title: true
+    slug: true
+    date: true
+    updated: true
+    comments: true
+    path: true
+    link: true
+    permalink: true
+    excerpt: true
+    keywords: true # but only if root keywords option language was set
+    text: true
+    raw: false
+    content: false
+  posts:
+    title: true
+    slug: true
+    date: true
+    updated: true
+    comments: true
+    path: true
+    link: true
+    permalink: true
+    excerpt: true
+    keywords: true # but only if root keywords option language was set
+    text: true
+    raw: false
+    content: false
+    categories: true
+    tags: true
+
+plugins: #插件，例如生成 RSS 和站点地图的
+  hexo-generator-feed
+  hexo-generator-sitemap
+
+admin:
+  username: andyliwr
+  password_hash: $2a$10$v6keGgYYsdGA4e70s0i7ae.wE34IgO89UzRkx7IH0ap/44M2nuTzC
+  secret: blog
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

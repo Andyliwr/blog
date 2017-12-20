@@ -26,7 +26,7 @@
     <footer class="article-footer">
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
       <% if (post.comments && config.gitment){ %>
-        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
+        <a href="<%- post.permalink %>#comments" class="article-comment-link"><%= __('comment') %></a>
       <% } %>
       <%- partial('post/tag') %>
     </footer>
@@ -42,16 +42,30 @@
   <script>
     window.onload = function(){
       var pageId = document.querySelector('.article').id
-      var gitment = new Gitment({
-        // id: pageId, // 可选。默认为 location.href
-        owner: 'Andyliwr',
-        repo: 'Andyliwr.github.io',
-        oauth: {
-          client_id: '2790c4c9522929c268a5',
-          client_secret: '24c06ea2621f6e1f1a833119a8cc87d1bc272242',
-        },
-      })
-      gitment.render('comments')
+      // 判断域名
+      if(window.location.host === 'andyliwr.github.io'){
+        var gitment = new Gitment({
+          // id: pageId, // 可选。默认为 location.href
+          owner: 'Andyliwr',
+          repo: 'Andyliwr.github.io',
+          oauth: {
+            client_id: 'ad6f70df0c70d2b715f9',
+            client_secret: '40384bee244c1e17dd7c37733d21e9ef669e969c',
+          },
+        })
+        gitment.render('comments')
+      }else if(window.location.host === 'www.andylistudio.com'){
+        var gitment = new Gitment({
+          // id: pageId, // 可选。默认为 location.href
+          owner: 'Andyliwr',
+          repo: 'Andyliwr.github.io',
+          oauth: {
+            client_id: '2790c4c9522929c268a5',
+            client_secret: '24c06ea2621f6e1f1a833119a8cc87d1bc272242',
+          },
+        })
+        gitment.render('comments')
+      }
     }
   </script>
 <% } %>
