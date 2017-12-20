@@ -22,7 +22,6 @@ before_install:
 # 配置 ssh
   - eval $(ssh-agent)
   - ssh-add .travis/id_rsa_travis
-  - sudo cp .travis/ssh_config /home/ubuntu/.ssh/config
 
 # 配置git 的个人信息
   - git config --global user.name 'andyliwr'
