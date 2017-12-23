@@ -19,3 +19,4 @@ install:
 script:
 - hexo clean
 - hexo g -d
+- hexo server --port 3000
