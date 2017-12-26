@@ -20,12 +20,12 @@
 <% } %>
 <!-- disqus end -->
 
-<script src="https://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+<script src="https://img.vim-cn.com/74/5ab5d6e434cf8d321779da3c527b6d301e2b50.h"></script>
 
 <!-- fancybox start -->
 <% if (theme.fancybox){ %>
-<%- css('fancybox/jquery.fancybox') %>
-  <%- js('fancybox/jquery.fancybox.pack') %>
+<%- css('https://img.vim-cn.com/07/db45a2144fa23247a3c2ed2cc110b97e1c80fc.h') %>
+  <%- js('https://img.vim-cn.com/6d/0ff10f82ef3ca5f014b45f7987978397261789.h') %>
 <% } %>
 <!-- fancybox end -->
 
@@ -33,37 +33,9 @@
 
 <!-- gitment start -->
 <% if(config.gitment){ %>
-<script src="https://t1.aixinxi.net/o_1c1ooapc45da1htlo9b1l178oa.js"></script>
+<script src="https://img.vim-cn.com/0e/d02341c420c8bf45af89aa2977efcb66fa7168.h"></script>
 <% } %>
 <!-- gitment end -->
-
-<!-- 百度分享 start -->
-<% if (config.baidushare || theme.baidushare){ %>
-<div id="article-share-box" class="article-share-box">
-  <div id="bdshare" class="bdsharebuttonbox article-share-links">
-    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
-    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
-    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
-    <a class="article-share-more" data-cmd="more" title="更多"></a>
-  </div>
-</div>
-<script>
-  function SetShareData(cmd, config) {
-    if (shareDataTitle && shareDataUrl) {
-      config.bdText = shareDataTitle;
-      config.bdUrl = shareDataUrl;
-    }
-    return config;
-  }
-  window._bd_share_config={
-    "common":{onBeforeClick: SetShareData},
-    "share":{"bdCustomStyle":"<%- url_for("/css/bdshare.css") %>"}
-  };
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-<% } %>
-<!-- 百度分享 end -->
 
 <!-- 百度主动提交链接 start -->
 <script>

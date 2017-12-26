@@ -25,13 +25,14 @@ tags:
 博主觉得这样一个流程太复杂，能不能用些简单的方法将所有的动作简化为一个动作---那就是我只需要执行`git push`，其他的事都不用管了。我想到了持续集成，正好之前也了解到了travis，所以花了些时间学习了下`travis`，并且在历经磨难之后学会了`travis`☺。我突然想起了自己还在上海的时候，为了使用jekyll搭建自己的一个博客，整整花了一个周末折腾。
 
 我们开始吧：
-1. 首先我们需要在服务器上安装travis的运行环境，但是因为travis是基于`ruby`开发的，所以我们先要安装一个`ruby`。`ubuntu`安装`ruby`很简单
+1. **安装travis的运行环境**
+首先我们需要在服务器上安装travis的运行环境，但是因为travis是基于`ruby`开发的，所以我们先要安装一个`ruby`。`ubuntu`安装`ruby`很简单
 ```
 sudo apt-get update
 sudo apt-get install ruby
 ```
   **PS**:这样安装的ruby很多时候安装不上travis，因为travis需要ruby2.0以上的版本，但是apt-get安装的是1.9版本。所以最好是选择源码安装
-  ```
+  ```shell
   # 卸载之前安装的ruby
   sudo apt-get remove ruby
   # ruby官方网站下载地址 http://www.ruby-lang.org/en/downloads/
@@ -53,7 +54,7 @@ sudo apt-get install ruby
   gem install travis
   ```
   **PS**: 如果安装太慢可以将`gem`源改成国内源，[参考方法](https://gems.ruby-china.org/)
-2. 使用travis初始化你的项目
+2. **使用travis初始化你的项目**
   因为我们需要使用travis将`hexo generate`生成的代码推送到github上，所以需要让服务器拥有github推送的代码的权限:
   ```
   # 生成密钥
@@ -83,7 +84,7 @@ sudo apt-get install ruby
   ```
   sudo chown ubuntu:ubuntu /home/ubuntu/.ssh/ -R
   ```
-3. 初始化travis配置文件
+3. **初始化travis配置文件**
   在github项目根目录下执行如下命令：
   ```
   # 使用 githu 登录 travis，期间需要输入github的用户名和密码
@@ -96,11 +97,12 @@ sudo apt-get install ruby
   mkdir .travis && mv id_rsa.enc .travis/
   # 修改before_install命令了的id_rsa.enc的路径为.travis/id_rsa.enc
   ```
-4. 如此一个travis项目算是初始化好了，你可以执行一个代码`push`，然后去travis的官网看下持续集成是否执行成功了。
+4. **初始化完成**
+  如此一个travis项目算是初始化好了，你可以执行一个代码`push`，然后去travis的官网看下持续集成是否执行成功了。
 
 #### 自定义travis的集成步骤
 之前还是只初始化好了travis，下面我来介绍如定义自定步骤：
-```
+```yml
 # 使用的语言
 language:
  - node_js
@@ -143,3 +145,57 @@ script:
 ```
 **PS**：注意由于现在腾讯云服务器已经可以只用ssh秘钥访问github了所以在博客项目的`.config.yml`文件deploy里应该ssh地址
 我这里感觉还有些问题，直接将`id_rsa_travis`秘钥存储在了github项目上，那么别人如果拿到了这个秘钥就能对我的github做任意的修改。这个问题以后再修复吧~
+
+
+#### 更好的方式
+之前说过我是将`id_rsa_travis`秘钥直接存放在了github项目中，这样很不安全。果然第二天就有人给我提了个`pull request`，让我删除这个秘钥。我一想不能呀，删除之后我怎么把代码推送到`Andyliwr.github.io`这个项目呢？
+![Pull Request](https://img.vim-cn.com/f5/77548bb55f147b0891d1a7fb8bab96f9e0335e.png)
+于是自己又去百度了下怎么使用`travis`部署`github`博客，没想到还真给找到了，[手把手教你使用Travis CI自动部署你的Hexo博客到Github上](https://www.jianshu.com/p/e22c13d85659)
+1. **生成`github access token`**
+  其实不使用`ssh`秘钥，还有一种方式让你能推送代码到`github`项目，那就是`github access token`。
+  在`Setting`-->`Developer settings`-->`Personal access tokens`中点击`Generate new token`，生成一个`token`，权限选择上除了`delete_repo`其他都打上勾
+  ![权限选择](https://img.vim-cn.com/59/593ea99fea36afde85e75bcd40a7845731c1c4.png)
+2. **将`token`加入到项目的环境变量中**
+  复制生成的`token`，然后打开`travis`官网找到博客项目，在`Setting`-->`Environment Variables`中添加一个变量--`GITHUB_TOKEN`，值就是刚才生成的`token`。这样你就能在`.travis.yml`中通过`${GITHUB_TOKEN}`获取到这个值了
+  之所以这样做是为了避免token值被提交到github项目中，产生一些不必要的麻烦。
+  ![设置环境变量](https://img.vim-cn.com/31/f833ad262d987ab5db0f60eeeef504a50fe365.png)
+3. **配置`.travis.yml`文件**
+  这里需要将`hexo d`的部署方式替换成`git push --force`的方式，因为没有了`id_rsa_travis`之后`hexo d`的部署方式需要输入`github`用户名和密码。
+  其他没啥区别，我直接贴代码了:
+  ```yml
+  language:
+    - node_js
+  node_js:
+    - stable
+
+  branches:
+    only:
+      - master
+
+  install:
+    - npm install hexo-cli -g
+    - npm install
+
+  script:
+    - hexo clean
+    - hexo g
+
+  after_script:
+    - cd ./public
+    - git init
+    - git config user.name "andyliwr"
+    - git config user.email "andyliwr@outlook.com"
+    - git add .
+    - git commit -m "Update blog"
+    - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master
+
+  env:
+  global:
+    - GH_REF: github.com/Andyliwr/Andyliwr.github.io
+  ```
+
+#### 结尾
+其实如何登陆我的腾讯云服务器，帮我执行`git pull`启动，我还是不知道怎么做。不过本人其实打算放弃`andylistudio.com`的域名了，以后的博客域名就是用`andyliwr.github.io`吧~
+最后贴一张，`travis`部署的执行结果:
+![任务集合](https://img.vim-cn.com/8f/9c86c53f7af5278b78739b7a02da3cd9f4d30d.png)
+![日志输出](https://img.vim-cn.com/df/8d1823372916f497b202c6aa29ccb75973dbc5.png)
