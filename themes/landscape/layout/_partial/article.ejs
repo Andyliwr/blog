@@ -25,7 +25,7 @@
     </div>
     <footer class="article-footer">
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
-      <% if (post.comments && config.gitment){ %>
+      <% if (post.comments && config.gitaik){ %>
         <a href="<%- post.permalink %>#comments" class="article-comment-link"><%= __('comment') %></a>
       <% } %>
       <%- partial('post/tag') %>
@@ -36,7 +36,7 @@
   <% } %>
 </article>
 
-<% if (!index && post.comments && config.gitment){ %>
+<% if (!index && post.comments && config.gitaik){ %>
   <section id="comments">
   </section>
   <script>
@@ -44,27 +44,27 @@
       var pageId = document.querySelector('.article').id
       // 判断域名
       if(window.location.host === 'andyliwr.github.io'){
-        var gitment = new Gitment({
+        var gitaik = new Gitalk({
           // id: pageId, // 可选。默认为 location.href
-          owner: 'Andyliwr',
+          clientID: 'ad6f70df0c70d2b715f9',
+          clientSecret: '40384bee244c1e17dd7c37733d21e9ef669e969c',
           repo: 'Andyliwr.github.io',
-          oauth: {
-            client_id: 'ad6f70df0c70d2b715f9',
-            client_secret: '40384bee244c1e17dd7c37733d21e9ef669e969c',
-          },
+          owner: 'Andyliwr',
+          admin: ['Andyliwr'],
+          distractionFreeMode: false
         })
-        gitment.render('comments')
+        gitaik.render('comments')
       }else if(window.location.host === 'www.andylistudio.com'){
-        var gitment = new Gitment({
+        var gitaik = new Gitalk({
           // id: pageId, // 可选。默认为 location.href
-          owner: 'Andyliwr',
+          clientID: '2790c4c9522929c268a5',
+          clientSecret: '24c06ea2621f6e1f1a833119a8cc87d1bc272242',
           repo: 'Andyliwr.github.io',
-          oauth: {
-            client_id: '2790c4c9522929c268a5',
-            client_secret: '24c06ea2621f6e1f1a833119a8cc87d1bc272242',
-          },
+          owner: 'Andyliwr',
+          admin: ['Andyliwr'],
+          distractionFreeMode: false
         })
-        gitment.render('comments')
+        gitaik.render('comments')
       }
     }
   </script>
