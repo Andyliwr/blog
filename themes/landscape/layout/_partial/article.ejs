@@ -42,16 +42,6 @@
   <script>
     window.onload = function(){
       var pageId = document.querySelector('.article').id
-      var gitalk = new Gitalk({
-        // id: pageId, // 可选。默认为 location.href
-        clientID: 'ad6f70df0c70d2b715f9',
-        clientSecret: '40384bee244c1e17dd7c37733d21e9ef669e969c',
-        repo: 'Andyliwr.github.io',
-        owner: 'Andyliwr',
-        admin: ['Andyliwr'],
-        distractionFreeMode: false
-      })
-      gitalk.render('comments')
       // 判断域名
       if(window.location.host === 'andyliwr.github.io'){
         var gitalk = new Gitalk({

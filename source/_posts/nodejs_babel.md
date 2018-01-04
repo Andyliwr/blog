@@ -106,3 +106,34 @@ touch .babelrc
 ```
 
 文章翻译自babel官方提供的demo，源码下载请点击[这里](https://github.com/babel/example-node-server)
+
+#### 续篇
+1. **并不是安装了最新版的nodejs就能支持`import`**
+比如我现在服务器安装的`node`版本是最新的`v9.3.0`，新建一个`app.js`代码如下：
+```
+import moment from 'moment'
+
+async function printTime(){
+ await console.log(moment().format('YYYY/MM/DD HH:MM:SS'))
+}
+printTime()
+```
+然后使用`node app.js`运行它，却提示错误：
+![直接使用node运行](https://fs.andylistudio.com/blog/node-v.png/800x400)
+后来去网上查了下虽然es6定义了`import`和`export`的语法，但是目前`nodejs`还是不支持。
+那支持`async`和`await`吗？于是我把代码修改了下：
+```
+// import moment from 'moment'
+
+async function printTime(){
+ await console.log('hello world!')
+}
+printTime()
+```
+这次正常输出了hello world!，说明`async`和`await`是支持的。
+
+2. **如果运行app.js但是app.js引用了其他的文件，在其他的文件中使用了import语法，最后编译出来的js并不能正常执行**
+解决的方法就是连同引用的文件一起使用babel编译了
+```
+babel config -d dist && babel src -d dist
+```
