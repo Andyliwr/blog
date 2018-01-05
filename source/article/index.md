@@ -7,6 +7,12 @@ date: 2017-12-10 19:29:00
   <div class="header"><i class="icon-bookmark"></i>记事</div>
   <div class="content">
     <div class="link-item">
+      <a href="posts/2017_summary.html" target="_blank">
+        <span class="title">2017年终总结</span>
+        <span class="des">磕磕绊绊，终于走到了2017年年末</span>
+      </a>
+    </div>
+    <div class="link-item">
       <a href="posts/kemuer.html" target="_blank">
           <span class="title">科目二挂了</span>
           <span class="des">我是不是一直都只是看起来很努力</span>
