@@ -1,9 +1,10 @@
 ---
-title: Element form表单组件重复错误提示不显示
+title: element form表单组件重复错误提示不显示
 date: 2017-12-25 11:24:29
 tags:
  - 同花顺
  - vue
+ - element
 ---
 
 #### 前言
