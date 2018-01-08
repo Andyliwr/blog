@@ -5,10 +5,8 @@
   <meta charset="utf-8">
   <%
   var title = page.title;
-
   if (is_archive()){
     title = __('archive_a');
-
     if (is_month()){
       title += ': ' + page.year + '/' + page.month;
     } else if (is_year()){
@@ -42,4 +40,5 @@
     <% if (config.gitalk){ %>
      <link type="text/css" rel="stylesheet" href="https://fs.andylistudio.com/blog/gitalk.css">
     <% } %>
+    <script type="text/javascript" src="https://fs.andylistudio.com/blog/jquery.min.js"></script>
 </head>

@@ -27,3 +27,10 @@ recommend_posts: 推荐文章
 recent_comments: 最近评论
 official_accounts: 微信公众号
 follow_mes: 来关注我
+insight:
+    hint: '想要查找什么...'
+    posts: '文章'
+    pages: '页面'
+    categories: '分类'
+    tags: '标签'
+    untitled: '(未命名)'

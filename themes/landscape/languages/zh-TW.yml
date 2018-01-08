@@ -17,3 +17,10 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
 tag: Tag
+insight:
+    hint: '輸入關鍵字(休息,食記...)'
+    posts: '文章'
+    pages: '頁面'
+    categories: '分類'
+    tags: '標籤'
+    untitled: '(未命名)'

@@ -145,7 +145,7 @@ handleItemClick(item) {
   ```
   哎，写不下去了，直接说这种方法的带来的问题吧~，那就是会让原本很有序的导航active展示变得很混乱，临时改变导航的active类但是却并没有在正常之后改回来，于是就出现了多个导航在同一时间有active类
 
-2. 正确的解决方法
+2. **正确的解决方法**
   其实思路换一下就好了，在当前路由下给对应的导航加上active类本身不是什么很难的事，既然用element会有bug，那不如不用它的，自己去实现这块的功能。
   首先删除原来写在`<el-menu></el-menu>`标签上的`:default-index="onRoutes"`属性，对于每个`<sub-menu></sub-menu>`动态去定义它的active类
   ```xml

@@ -18,3 +18,10 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Categorie
 tag: Label
+insight:
+    hint: 'Type something...'
+    posts: 'Posts'
+    pages: 'Pages'
+    categories: 'Categories'
+    tags: 'Tags'
+    untitled: '(Untitled)'

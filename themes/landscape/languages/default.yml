@@ -17,3 +17,10 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
 tag: Tag
+insight:
+    hint: 'Type something...'
+    posts: 'Posts'
+    pages: 'Pages'
+    categories: 'Categories'
+    tags: 'Tags'
+    untitled: '(Untitled)'

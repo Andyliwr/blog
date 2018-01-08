@@ -1,6 +1,10 @@
-# BehavioralGeneticsSQL-blog
+# 月光倾城的代码小屋
+## 更新历史
+1. 2017年12月29日 开始写更新记录
+
 ## 介绍
 使用hexo来管理以及发布网站博客，只需要通过写markdown文件就可以发布博客。
+
 ## 使用
 1. 克隆本项目并安装
 ```
@@ -47,4 +51,12 @@ hexo deploy
     subtitle = '爱上一个人，也会爱上她喜欢的'
   }
 %>
+```
+3. 使用font-awaresome需要自己定义类
+```
+.fa-times-circle
+  font-style: normal
+  font-family: 'FontAwesome'
+  &:before
+    content: "\f057"
 ```

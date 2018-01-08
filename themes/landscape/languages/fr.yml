@@ -17,3 +17,10 @@ powered_by: Propulsé by
 rss_feed: Flux RSS
 category: Catégorie
 tag: Mot-clé
+insight:
+    hint: 'Type something...'
+    posts: 'Articles'
+    pages: 'Pages'
+    categories: 'Catégories'
+    tags: 'Tags'
+    untitled: '(Untitled)'
