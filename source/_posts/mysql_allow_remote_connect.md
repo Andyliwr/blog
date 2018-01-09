@@ -4,7 +4,7 @@ tags: 数据库
 ---
 #### 前言
 今天配置新后台的mysql数据库，新建了一个用户之后在本地可以登录，但是远程一直显示`access delay`,今天就来讲讲如何解决mysql本地可以登录但是远程不能登录的解决方案吧。
-![mysql](https://olpkwt43d.qnssl.com/blog/images/mysql.png)
+![mysql](https://fs.andylistudio.com/blog/images/mysql.png/default)
 先贴些网上的常见方案，多半都是这些设置不对引起的，虽然我的问题并非通过这些解决的。
 1. 检查防火墙是否开放了3306多端口
 先看是否能ping通远程服务器，ping 192.168.1.211，如果不可以就是网络问题。然后，检查端口是否被防火墙挡住了，telnet 192.168.1.211 3306，如果连接失败，配置防火墙。

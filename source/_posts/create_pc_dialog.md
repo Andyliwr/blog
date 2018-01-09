@@ -6,7 +6,7 @@ tags: 同花顺
 
 #### 前言
 开发中我们经常会碰到这种需求---自定义弹窗，那么如何创建一个正确的弹窗呢？
-<img class="top-img" src="https://olpkwt43d.qnssl.com/blog/images/modal.png" alt="弹出框" style="width: 70%;margin: 20px auto;" />
+<img class="top-img" src="https://fs.andylistudio.com/blog/images/modal.png/default" alt="弹出框" style="width: 70%;margin: 20px auto;" />
 
 #### 考虑的方面
 #### 1. 定位

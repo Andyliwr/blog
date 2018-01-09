@@ -11,10 +11,10 @@ tags:
 
 1、 首先按windown键，打开应用面板，通过搜索chrom找到chrome启动图标，右击它找到`更多--打开文件所在位置`，然后就会打开一个文件管理器，地址是`startMenu`
 
-![打开快图标所在位置](https://olpkwt43d.qnssl.com/blog/post20170910_01.png)
+![打开快图标所在位置](https://fs.andylistudio.com/blog/post20170910_01.png/default)
 
 2、 然后右击chrome图标，选择`属性`，在弹出的对话框内将目标里的`http://www.hao123.com/xxx`删除即可。
 
-![删除hao123](https://olpkwt43d.qnssl.com/blog/post20170910_02.png)
+![删除hao123](https://fs.andylistudio.com/blog/post20170910_02.png/default)
 
 再次打开chrome就会发现主页恢复了。

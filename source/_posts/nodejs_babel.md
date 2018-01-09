@@ -119,7 +119,7 @@ async function printTime(){
 printTime()
 ```
 然后使用`node app.js`运行它，却提示错误：
-![直接使用node运行](https://fs.andylistudio.com/blog/node-v.png/800x400)
+![直接使用node运行](https://fs.andylistudio.com/blog/node-v.png/default)
 后来去网上查了下虽然es6定义了`import`和`export`的语法，但是目前`nodejs`还是不支持。
 那支持`async`和`await`吗？于是我把代码修改了下：
 ```

@@ -9,7 +9,7 @@ tags:
 
 #### 前言
 今天测试报告了广告竞价后台的一个`bug`:
-![element导航的bug](https://fs.andylistudio.com/blog/2018_01_04/bug.png/800x400)
+![element导航的bug](https://fs.andylistudio.com/blog/2018_01_04/bug.png/default)
 大致原因是这样：
 先看下`element`对于导航的每一项的点击的处理方式。
 ```js
