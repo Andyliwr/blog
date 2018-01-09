@@ -1,3 +1,9 @@
+<% if(post.toc == true){ %>
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <%- toc(post.content, {list_number: true}) %>
+  </div>
+<% } %>
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
   <div class="article-meta">
     <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>

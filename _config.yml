@@ -128,6 +128,7 @@ plugins: #插件，例如生成 RSS 和站点地图的
   hexo-generator-feed
   hexo-generator-sitemap
 
+# hexo-admin
 admin:
   username: andyliwr
   password_hash: $2a$10$v6keGgYYsdGA4e70s0i7ae.wE34IgO89UzRkx7IH0ap/44M2nuTzC

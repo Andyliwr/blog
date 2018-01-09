@@ -5,7 +5,7 @@ tags:
   - js
 ---
 
-### 前言
+#### 前言
 使用JavaScript的forEach方法，我们可以轻松的循环一个数组，但如果你认为document.querySelectorAll()方法返回的应该是个数组，而使用forEach循环它
 ```js
 // 错误代码
@@ -15,7 +15,7 @@ document.querySelectorAll('.module').forEach(function() {
 ```
 执行上面的代码，你将会得到执行错误的异常信息。这是因为，`document.querySelectorAll()`返回的不是一个数组，而是一个[`NodeList`](https://developer.mozilla.org/zh-CN/docs/Web/API/NodeList)。
 
-### 遍历
+#### 遍历
 对于一个`NodeList`，我们可以用下面的技巧来循环遍历它：
 ```js
 var divs = document.querySelectorAll('div');

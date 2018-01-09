@@ -1,3 +1,61 @@
+/**
+ * 计算页面滚动高度
+ */
+function rootScollTop() {
+  return document.documentElement.scrollTop || document.body.scrollTop;
+}
+
+/**
+ * 计算offset的函数
+ * @param {Object} el
+ */
+function offset (el) {
+  var x = el.offsetLeft,
+    y = el.offsetTop;
+  if (el.offsetParent) {
+    var pOfs = arguments.callee(el.offsetParent);
+    x += pOfs.x;
+    y += pOfs.y;
+  }
+  return {
+    x: x,
+    y: y
+  };
+}
+
+// 目录工具
+const tocTool = (function () {
+  var toc = $('#toc')
+  if (!toc || !toc.children.length) {
+    return {
+      fixed: noop,
+      actived: noop
+    }
+  }
+  var bannerH = $('#header').height()
+  var titles = $('.article').find('h3, h4, h5')
+  toc.find('a[href="#' + titles[0].id + '"]').parent().addClass('active')
+
+  return {
+    fixed: function (top) {
+      top >= bannerH ? toc.addClass('fixed') : toc.removeClass('fixed')
+    },
+    actived: function (top) {
+      for (i = 0, len = titles.length; i < len; i++) {
+        if (top > offset(titles[i]).y - bannerH - 5) {
+          toc.find('li.active').removeClass('active')
+          var active = toc.find('a[href="#' + titles[i].id + '"]').parent()
+          active.addClass('active')
+        }
+      }
+      if (top < offset(titles[0]).y) {
+        toc.find('li.active').removeClass('active')
+        toc.find('a[href="#' + titles[0].id + '"]').parent().addClass('active')
+      }
+    }
+  }
+})();
+
 (function($) {
   /*toTop start*/
   // When to show the scroll link
@@ -27,38 +85,58 @@
   /*toTop end*/
 
   /* search start*/
-  var $searchWrap = $('#search-form-wrap'),
-    isSearchAnim = false,
-    searchAnimDuration = 200;
-
-
   $('#nav-search-btn').on('click', function() {
-    var $main = $('.ins-search');
+    var $main = $('.ins-search')
     $main.addClass('show')
   });
   /* search end*/
 
+  /* toc start */
+  var $toc = $('#toc')
+  if(window.location.pathname !== "/"){
+    if($toc){
+      $toc.show()
+      // $toc.scrollToFixed({dontSetWidth:true})
+      // 监听windows的scroll事件，为目录动态添加active类
+      window.addEventListener('DOMContentLoaded', function () {
+        var top = rootScollTop()
+        tocTool.fixed(top)
+        tocTool.actived(top)
+      })
+      document.addEventListener('scroll', function () {
+        var top = rootScollTop()
+        tocTool.fixed(top)
+        tocTool.actived(top)
+      }, false)
+    }
+  }else{
+    if($toc){
+      $toc.hide()
+    }
+  }
+  /* toc end */
+
   // Share
   $('body').on('click', function(){
-    $('.article-share-box.on').removeClass('on');
+    $('.article-share-box.on').removeClass('on')
   }).on('click', '.article-share-link', function(e){
-    e.stopPropagation();
+    e.stopPropagation()
 
     var $this = $(this),
       type = $this.attr('data-share'),
-      offset = $this.offset();
+      offset = $this.offset()
 
     if (type == 'baidu') {
-      var box = $('#article-share-box');
-      shareDataUrl = $this.attr('data-url');
-      shareDataTitle = $this.attr('data-title');
+      var box = $('#article-share-box')
+      shareDataUrl = $this.attr('data-url')
+      shareDataTitle = $this.attr('data-title')
 
       if (box.hasClass('on')){
-        box.removeClass('on');
-        return;
+        box.removeClass('on')
+        return
       }
 
-      $('.article-share-box.on').hide();
+      $('.article-share-box.on').hide()
 
       box.css({
         top: offset.top + 25,
@@ -70,10 +148,10 @@
       id = 'article-share-box-' + $this.attr('data-id');
 
       if ($('#' + id).length){
-        var box = $('#' + id);
+        var box = $('#' + id)
 
         if (box.hasClass('on')){
-          box.removeClass('on');
+          box.removeClass('on')
           return;
         }
       } else {
@@ -87,27 +165,27 @@
               '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
             '</div>',
           '</div>'
-        ].join('');
+        ].join('')
 
-        var box = $(html);
+        var box = $(html)
 
-        $('body').append(box);
+        $('body').append(box)
       }
 
-      $('.article-share-box.on').hide();
+      $('.article-share-box.on').hide()
 
       box.css({
         top: offset.top + 25,
         left: offset.left
-      }).addClass('on');
+      }).addClass('on')
     };
   }).on('click', '.article-share-box', function(e){
-    e.stopPropagation();
+    e.stopPropagation()
   }).on('click', '.article-share-box-input', function(){
-    $(this).select();
+    $(this).select()
   }).on('click', '.article-share-box-link', function(e){
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault()
+    e.stopPropagation()
 
     window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
   });
