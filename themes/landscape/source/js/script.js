@@ -92,10 +92,14 @@ const tocTool = (function () {
   /* search end*/
 
   /* toc start */
-  var $toc = $('#toc')
+  var $toc = $('.toc-article')
   if(window.location.pathname !== "/"){
     if($toc){
-      $toc.show()
+      if((($(document).width() - 1260) / 2) > ($toc.width() + 30)){
+        $toc.show()
+      }else{
+        $toc.hide()
+      }
       // $toc.scrollToFixed({dontSetWidth:true})
       // 监听windows的scroll事件，为目录动态添加active类
       window.addEventListener('DOMContentLoaded', function () {
@@ -108,6 +112,13 @@ const tocTool = (function () {
         tocTool.fixed(top)
         tocTool.actived(top)
       }, false)
+      $(window).resize(function () {
+        if((($(document).width() - 1260) / 2) > ($toc.width() + 30)){
+          $toc.show()
+        }else{
+          $toc.hide()
+        }
+      })
     }
   }else{
     if($toc){
