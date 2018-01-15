@@ -22,8 +22,12 @@ var dynamicLoading = {
     head.appendChild(script);
   }
 }
-
 dynamicLoading.css('../styles/list.css');
+var name=prompt("Please enter your name","")
+if (name === "ldk"){
+}else{
+  document.html('您没有权限访问该页面～')
+}
 
 window.onload = function () {
   // 去掉container里的换行符

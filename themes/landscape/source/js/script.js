@@ -24,37 +24,40 @@ function offset (el) {
 }
 
 // 目录工具
-const tocTool = (function () {
-  var toc = $('#toc')
-  if (!toc || !toc.children.length) {
-    return {
-      fixed: noop,
-      actived: noop
+const tocTool = null
+if(window.location.href.indexOf('article/') < 0){
+  tocTool = (function () {
+    var toc = $('#toc')
+    if (!toc || !toc.children.length) {
+      return {
+        fixed: noop,
+        actived: noop
+      }
     }
-  }
-  var bannerH = $('#header').height()
-  var titles = $('.article').find('h3, h4, h5')
-  toc.find('a[href="#' + titles[0].id + '"]').parent().addClass('active')
-
-  return {
-    fixed: function (top) {
-      top >= bannerH ? toc.addClass('fixed') : toc.removeClass('fixed')
-    },
-    actived: function (top) {
-      for (i = 0, len = titles.length; i < len; i++) {
-        if (top > offset(titles[i]).y - bannerH - 5) {
+    var bannerH = $('#header').height()
+    var titles = $('.article').find('h3, h4, h5')
+    toc.find('a[href="#' + titles[0].id + '"]').parent().addClass('active')
+  
+    return {
+      fixed: function (top) {
+        top >= bannerH ? toc.addClass('fixed') : toc.removeClass('fixed')
+      },
+      actived: function (top) {
+        for (i = 0, len = titles.length; i < len; i++) {
+          if (top > offset(titles[i]).y - bannerH - 5) {
+            toc.find('li.active').removeClass('active')
+            var active = toc.find('a[href="#' + titles[i].id + '"]').parent()
+            active.addClass('active')
+          }
+        }
+        if (top < offset(titles[0]).y) {
           toc.find('li.active').removeClass('active')
-          var active = toc.find('a[href="#' + titles[i].id + '"]').parent()
-          active.addClass('active')
+          toc.find('a[href="#' + titles[0].id + '"]').parent().addClass('active')
         }
       }
-      if (top < offset(titles[0]).y) {
-        toc.find('li.active').removeClass('active')
-        toc.find('a[href="#' + titles[0].id + '"]').parent().addClass('active')
-      }
     }
-  }
-})();
+  })();
+}
 
 (function($) {
   /*toTop start*/
@@ -94,7 +97,7 @@ const tocTool = (function () {
   /* toc start */
   var $toc = $('.toc-article')
   if(window.location.pathname !== "/"){
-    if($toc){
+    if($toc.length > 0){
       if((($(document).width() - 1260) / 2) > ($toc.width() + 30)){
         $toc.show()
       }else{
