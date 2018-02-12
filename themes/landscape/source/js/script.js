@@ -24,7 +24,7 @@ function offset (el) {
 }
 
 // 目录工具
-const tocTool = null
+let tocTool = null
 if(window.location.href.indexOf('article/') < 0){
   tocTool = (function () {
     var toc = $('#toc')
