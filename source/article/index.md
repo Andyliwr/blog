@@ -6,12 +6,12 @@ date: 2017-12-10 19:29:00
 <div class="container 2017">
   <div class="header"><i class="icon-bookmark"></i>记事</div>
   <div class="content">
-    <div class="link-item">
-      <!--<a href="posts/close_hua_bie.html" target="_blank">
+    <!--<div class="link-item">
+      <a href="posts/close_hua_bie.html" target="_blank">
         <span class="title">至少要穷得安心</span>
         <span class="des">关闭花呗，关闭网商贷</span>
-      </a>-->
-    </div>
+      </a>
+    </div>-->
     <div class="link-item">
       <a href="posts/2017_summary.html" target="_blank">
         <span class="title">2017年终总结</span>
@@ -48,12 +48,12 @@ date: 2017-12-10 19:29:00
           <span class="des">我从来都是只是个指路人，只不过现在导航结束了而已</span>
         </a>
     </div>
-    <div class="link-item">
+    <!--<div class="link-item">
       <a href="posts/xi_da_li_bie.html" target="_blank">
           <span class="title">离别西大</span>
           <span class="des">含着泪，我一读再读。却不得不承认，青春是一本太过仓促的书</span>
         </a>
-    </div>
+    </div>-->
     <div class="link-item">
       <a href="posts/go_to_shanghai2.html" target="_blank">
           <span class="title">出发，前往上海(二)</span>
