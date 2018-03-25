@@ -7,7 +7,7 @@ tags:
 
 Redis是一个key-value存储系统。和Memcached类似，但是解决了断电后数据完全丢失的情况，而且她支持更多无化的value类型，除了和string外，还支持lists（链表）、sets（集合）和zsets（有序集合）几种数据类型。这些数据类型都支持push/pop、add/remove及取交集并集和差集及更丰富的操作，而且这些操作都是原子性的。
 
-#### 下载安装redis
+## 下载安装redis
 
 ```bash
 redis中文官网—redis.cn，
@@ -42,7 +42,7 @@ vi /usr/local/redis/redis.conf
 然后输入redis-cli -a “你设置的密码”，输入keys *查看所有的键值对，权限报错的话就输入auth “你设置的密码”， 输入info查看redis的状态
 ```
 
-#### 常见错误处理
+## 常见错误处理
 A. `>>> 'protected-mode yes' Bad directive or wrong number of arguments`之前使用下载安装包自己编译的，后来输入redis-server无效，然后又使用apt-get安装了redis，两次版本不一致导致conf文件的某些字段老版本不支持，所以就删除`apt-get remove redis-server`
 B. make test出错，`You need tcl 8.5 or newer in order to run the Redis test.`
 
@@ -55,5 +55,5 @@ sudo make
 sudo make install
 ```
 
-#### 传送门：
+## 传送门：
 [讲redis设置为后台进程启动](http://blog.csdn.net/wujiangwei567/article/details/51206052)

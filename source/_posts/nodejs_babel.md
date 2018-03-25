@@ -5,10 +5,10 @@ tags:
   - nodejs
 ---
 
-#### 前言
+## 前言
 es都出了7了，是时候抛弃那些老的写法，试试那些es的新属性，新语法。为了保证代码的兼容性，可以在写代码的时候使用es新语法，然后使用babel编译成兼容性代码。那么到底该怎么做呢？
 
-#### 开始
+## 开始
 安装`babel-cli`
 ```
 # 初始化项目
@@ -53,7 +53,7 @@ console.log('Server running at http://127.0.0.1:1337/');
 ```
 这样就可以通过运行`npm run start`来启动`app.js`了
 
-#### 使用`nodemon`监听文件变化
+## 使用`nodemon`监听文件变化
 将`nodemon`和`npm run start`结合起来使用，这样一旦文件发生变化，babel就能自动编译改动的文件
 ```
 cnpm install --save-dev nodemon
@@ -66,7 +66,7 @@ cnpm install --save-dev nodemon
 ```
 重新使用`npm run start`启动`app.js`，然后修改`app.js`，在按下`ctrl+s`的时候后babel就会自动编译`app.js`
 
-#### 编译生产环境代码
+## 编译生产环境代码
 代码上生产环境的时候，我们需要将编译好的文件放在一个单独的目录下。
 新建目录，并将`app.js`移至该目录下：
 ```
@@ -85,7 +85,7 @@ mv app.js src/
 
 对于git项目，可能你不需要每次都提交`dist`目录下的改动，你可以在`.gitignore`文件下忽略`dist`目录的改动
 
-#### 将`babel`的配置写入到`.babelrc`文件中
+## 将`babel`的配置写入到`.babelrc`文件中
 ```
 touch .babelrc
 ```
@@ -107,7 +107,7 @@ touch .babelrc
 
 文章翻译自babel官方提供的demo，源码下载请点击[这里](https://github.com/babel/example-node-server)
 
-#### 续篇
+## 续篇
 1. **并不是安装了最新版的nodejs就能支持`import`**
 比如我现在服务器安装的`node`版本是最新的`v9.3.0`，新建一个`app.js`代码如下：
 ```

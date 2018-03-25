@@ -6,7 +6,7 @@ tags:
   - javascript
 toc: true  # 使用目录
 ---
-#### reduce
+## reduce
 我也是第一次听说数组还有一个reduce方法，要不是看别人的代码用到了这个，估计自己还不不会去查这样一个方法。
 `reduce()` 方法对累加器和数组中的每个元素（从左到右）应用一个函数，将其减少为单个值。最常见的代码：
 ```js
@@ -16,7 +16,7 @@ var total = [0, 1, 2, 3].reduce(function(sum, value) {
 ```
 最后输出`total`为6
 
-##### **入参**
+## 入参
 + **callback**
 + **initialValue**
 ```
@@ -34,12 +34,12 @@ reduce的回调函数接受四个参数
 
 *PS*：`initialValue`[可选] 用作第一个调用 `callback`的第一个参数的值。 如果没有提供初始值，则将使用数组中的第一个元素。 在没有初始值的空数组上调用 reduce 将报错
 
-##### **描述**
+## 描述
 回调函数第一次执行时，`accumulator` 和`currentValue`的取值有两种情况：调用`reduce`时提供`initialValue`，`accumulator`取值为`initialValue`，`currentValue`取数组中的第一个值；没有提供 `initialValue`，`accumulato`r取数组中的第一个值，`currentValue`取数组中的第二个值。
 注意：如果没有提供`initialValue`，`reduce` 会从索引1的地方开始执行 `callback` 方法，跳过第一个索引。如果提供`initialValue`，从索引0开始。
 如果数组为空且没有提供`initialValue`，会抛出`TypeError` 。如果数组仅有一个元素（无论位置如何）并且没有提供`initialValue`， 或者有提供`initialValue`但是数组为空，那么此唯一值将被返回并且`callback`不会被执行。
 
-##### **运行过程**
+## 运行过程
 运行下面的代码：
 ```js
 [0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array){
@@ -55,7 +55,7 @@ reduce的回调函数接受四个参数
 | first call | 3 | 3 | 3 | [0, 1, 2, 3, 4] | 6 |
 | first call | 6 | 4 | 4 | [0, 1, 2, 3, 4] | 10 |
 
-##### **常见用法**
+## 常见用法
 1. **数组累加**
 见**运行过程**中的代码
 2. **二维数组降维**
@@ -85,7 +85,7 @@ var countedNames = names.reduce(function (allNames, name) {
 // { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
 ```
 
-##### **兼容**
+## 兼容
 | Feature | Chrome | Edge | Firefox |	Internet | Explorer |	Opera |	Safari |
 | :---| :---| :---| :---| :---| :---| :---| :---|
 | Basic | support |	Yes |	Yes |	3 |	9 |	10.5 | 4 |

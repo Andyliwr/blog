@@ -6,10 +6,10 @@ tags:
  - javascript
 ---
 
-#### 前言
+## 前言
 今天在逛segmentfault的时候，看到人家源码里面各种使用call, apply。都搞得我看不懂了，于是下定决心搞懂它们的用法。
 
-#### 为什么要使用call和apply
+## 为什么要使用call和apply
 观摩大神解释， [知乎文章](https://www.zhihu.com/question/20289071):
 在javascript面向对象编程中中，我们经常会这样定义:
 ```js
@@ -39,12 +39,12 @@ var func1 = function(arg1, arg2) {};
 
 javascript中，某个函数的参数数量是不固定的，因此要说适用条件的话，当你的参数是明确知道数量时，用call，而不确定的时候，用apply，然后把参数push进数组传递进去。当参数数量不确定时，函数内部也可以通过`arguments`这个数组来便利所有的参数。
 
-#### 为什么我一直对call和apply感到这么陌生
+## 为什么我一直对call和apply感到这么陌生
 因为在平时的工作中我遇到的几乎都是流程式的代码，很少涉及到对象编程。比如一段代码重复使用，我们就可以定义一个全局函数来复用代码。这样一直在使用全局(windows)来调用这个函数，根本就不会用到call或者apply去改变上下文。再比如我们在一个对象中定义对象的方法，基本上也不会涉及到其他对象需要调用这个对象的方法的场景。至于用call和apply实现继承就更别谈了。
 
 看看以前的sb做法：
 ![](https://fs.andylistudio.com/blog/2018_01_12/mockapi.png)
-#### call和apply的用例
+## call和apply的用例
 1. **实现继承**
   ```
   var Parent = function(){
@@ -107,7 +107,7 @@ javascript中，某个函数的参数数量是不固定的，因此要说适用�
   ```
   反curring就是把原来已经固定的参数或者this上下文等当作参数延迟到未来传递。
 
-#### bind
+## bind
 ```js
 obj.bind(thisObj, arg1, arg2, ...);
 ```

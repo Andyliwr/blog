@@ -6,10 +6,10 @@ tags:
   - windows
 ---
 
-#### 前言
+## 前言
 今天早上好气呀！因为项目原因需要在自己电脑上安装一个`mysql`，去官网下载`mysql`的安装工具，结果到了最后一步无法配置`mysql`，就是那种可以选但是没有下一步按钮，这不是为难用户吗？折腾了半天只能删除`mysql installer`，下载mysql源码进行安装。下面简单描述下自己的安装过程：
 
-#### 安装mysql
+## 安装mysql
 1. **下载mysql源码**
 [官网下载地址](https://dev.mysql.com/downloads/mysql/)
 ![源码安装](http://ouizhbgin.bkt.clouddn.com/blog/2017/10/30/mysql_source.png)
@@ -56,7 +56,7 @@ datadir=D:\mysql\data
 	update user set authentication_string=PASSWORD('123456') where user="root";
 	```
 
-#### 史上最坑集合
+## 史上最坑集合
 **1、The mysql service on Local computer started and then stopped**
 由于修改mysql编码很频繁，导致`mysql`一直重启又关闭，最后一次重启时竟然不干了，直接报`The mysql service on Local computer started and then stopped`，我又开了漫天盖地的百度，`google`，可是愣是没找到一种解决方案（重启电脑都试过两次了）。于是开始试着去读mysql的错误日志，发现自己在修改编码的时候在my.ini文件的[mysqld]下面加入了`character_set_database=utf8`，但是`mysql`并不能识别这个配置。于是我将这一行配置删除掉。并且在注册表删除记录---`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MySQL`。重启`mysql`，这次报了今天早上遇到的错误`“The mysql service could not be started. The service did not report an error”`，于是只能删除data\目录下的所有数据，使用`mysqld --initialize-insecure`重新初始化一遍，最后才启动成功，我还得重新创建`root`用户。真心别坑我啊，难受>_<
 

@@ -6,14 +6,14 @@ tags:
  - linux
 ---
 
-#### 前言
+## 前言
 我最近将公司电脑系统换成`deepin`了，感觉体验不错。
 
 没了`windows`之后如何登录腾讯云呢？以前还有个`xshell`或者`mobaXterm`可以设置代理，现在要通过命令行登录了。
 
 网上用ssh隧道来翻墙的教程比较多，通过代理连接`ssh`的文章相对较少，这种方法适用于网络中防火墙屏蔽了`ssh`协议，或者其它原因无法通过`ssh`直连服务器的情况。配置好后ssh流量会通过指定的代理中转，从而突破防火墙的限制，主要用到了`ssh client`的`ProxyCommand`选项，需要配合第三方代理软件。
 
-#### Corkscrew
+## Corkscrew
 `Corkscrew`是专门为ssh提供`http`代理的软件，要使用`corkscrew`需要`http`代理支持`HTTP CONNECT`方法，建议使用`squid`或者`ATS`这类专业的代理软件，代理不建议设置认证
 1. **安装Corkscrew**
   访问Corkscrew的[github地址](https://github.com/elia/corkscrew)，在release中下载最新的发布包

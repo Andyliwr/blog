@@ -7,7 +7,7 @@ tags:
 ---
 
 最近做毕设的时候发现每次都需要输入命令启动mongo和redis，还有一些爬虫和后台接口。感觉很麻烦，为什么不用windows上类似shell的bat语法写一个部署工具呢？
-#### 截图
+## 截图
 ![主界面](http://img.blog.csdn.net/20170330195438160)
 
 ![启动mongo](http://img.blog.csdn.net/20170330195452051)
@@ -17,7 +17,7 @@ tags:
 注：图中所用软件为丑陋cmd的替换品 [cmder](https://github.com/cmderdev/cmder/releases/)
 
 不多多说了，直接上代码吧，bat语法大家可以自己搜索下。
-#### 主进程 `start.bat`
+## 主进程 `start.bat`
 ```bat
 @echo off
 echo 欢迎使用FollowHeart自动化工具，%username% ....
@@ -135,7 +135,7 @@ goto start
 pause
 ```
 
-#### 启动redis和mongo `startMongoAndRedis.bat`
+## 启动redis和mongo `startMongoAndRedis.bat`
 
 ```bat
 @echo off
@@ -159,7 +159,7 @@ If errorlevel 1 (
     echo Mongo启动失败，请检查你配置的目录是否正确...
 )
 ```
-#### 启动后端接口 `startApi`
+## 启动后端接口 `startApi`
 
 ```bat
 @echo off
@@ -178,7 +178,7 @@ If errorlevel 1 (
     echo 后端接口启动失败...
 )
 ```
-#### 启动爬虫 startBdReptile.bat
+## 启动爬虫 startBdReptile.bat
 
 ```bat
 @echo off
@@ -193,9 +193,9 @@ If exist node_modules (
 node networkReptile.js
 ```
 
-#### 踩的一些坑
+## 踩的一些坑
 创建bat文件最好先使用系统自带的记事本创建一个文本文件，然后在另存为bat文件，并且设置编码为ASNI，不然很容易中文乱码的。包括使用一些主流的编辑器如sublime都会出现这种问题。博主建议使用sublime编辑bat文件，毕竟有语法高亮和快捷键，写起来很方便。然后编写完了别保存直接复制到记事本中保存，这样能避免中文乱码。如果你有更好的方法，不妨在评论中回复博主。
 ![保存编码的问题](http://img.blog.csdn.net/20170330195143921)
-#### 传送门：
+## 传送门：
 1. [小白都能看懂的windows常用bat批处理命令](http://www.imooc.com/article/8283)
 2. [Bat语法命令](http://www.360doc.com/content/11/0804/10/4127803_137849318.shtml)
