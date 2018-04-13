@@ -6,12 +6,18 @@ date: 2017-12-10 19:29:00
 <div class="container 2017">
   <div class="header"><i class="icon-bookmark"></i>记事</div>
   <div class="content">
-    <!--<div class="link-item">
+    <div class="link-item">
+      <a href="posts/close_hua_bie.html" target="_blank">
+        <span class="title">无题</span>
+        <span class="des">感觉已经一个世纪没写博客了</span>
+      </a>
+    </div>
+    <div class="link-item">
       <a href="posts/close_hua_bie.html" target="_blank">
         <span class="title">至少要穷得安心</span>
         <span class="des">关闭花呗，关闭网商贷</span>
       </a>
-    </div>-->
+    </div>
     <div class="link-item">
       <a href="posts/2017_summary.html" target="_blank">
         <span class="title">2017年终总结</span>
