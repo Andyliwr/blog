@@ -1,6 +1,6 @@
 ---
 title: 如何使用travis为nodejs持续集成
-date: 2016-03-05 10:24:29
+date: 2017-12-05 10:24:29
 tags:
  - nodejs
  - travis
