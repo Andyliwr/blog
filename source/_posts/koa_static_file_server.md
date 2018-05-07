@@ -19,6 +19,7 @@ Koa中间件-`koa-static`能将项目的某个目录（一般是`static`或者`p
 `koa-static`并没有列出所有文件的功能，想要实现这一功能，只能自己写中间件处理了
 
 ### 中间件
+![最后的效果图](https://fs.andylistudio.com/1525692676116.png)
 #### static.js
 在`utils`目录下新建静态资源处理的js---`static.js`
 ```
@@ -185,7 +186,6 @@ router.get('/static', async (ctx) => {
 })
 ```
 这样当你访问`http://localhost:3000/static`就能列出位于static目录下的所有静态文件了
-
 ### 结束
 只是借鉴然后改了点东西，算是记录下吧...
 原文请查看[这里](https://chenshenhai.github.io/koa2-note/note/static/server.html)
