@@ -5,13 +5,13 @@ tags:
   - 同花顺
 ---
 
-在写css静态页面的时候让Html的高度自适应屏幕高度是一个常见的需求，比如你有一个需要置底的bottom按钮，需要在内容不足一屏的时候显示在屏幕的底部，在内容超过一屏的时候显示在所有内容的底部。
+在写 css 静态页面的时候让 Html 的高度自适应屏幕高度是一个常见的需求，比如你有一个需要置底的 bottom 按钮，需要在内容不足一屏的时候显示在屏幕的底部，在内容超过一屏的时候显示在所有内容的底部。
 
 #### **效果图：**
-<img src="http://img.blog.csdn.net/20170405152117164" alt="不足一屏时自动移到最下面" style="width: 80%" /> 
 
+<img src="http://img.blog.csdn.net/20170405152117164" alt="不足一屏时自动移到最下面" style="width: 80%" />
 
-#### **CSS的做法**
+#### **CSS 的做法**
 
 ```html
 html {
@@ -24,7 +24,9 @@ body {
   height: 100%;
 }
 ```
-又学了一种新方法，使用flex布局：
+
+又学了一种新方法，使用 flex 布局：
+
 ```html
 <div class="container">
   <header></header>
@@ -32,6 +34,7 @@ body {
   <footer></footer>
 </div>
 ```
+
 ```css
 .container {
   display: flex;
@@ -54,31 +57,35 @@ footer {
   min-height: 100px;
 }
 ```
-#### **JS的做法**
-css的做法有时候会在定位的时候造成一些麻烦，可以尝试使用js去动态改变html的高度
-#### 基于zepto
+
+#### **JS 的做法**
+
+css 的做法有时候会在定位的时候造成一些麻烦，可以尝试使用 js 去动态改变 html 的高度
+
+#### 基于 zepto
 
 ```javascript
-$(document).ready(function(){
+$(document).ready(function() {
   var windowHeight = $(window).height();
-  if($(this).height() < windowHeight){
-	  $(this).height(windowHeight);
+  if ($(this).height() < windowHeight) {
+    $(this).height(windowHeight);
   }
 });
 ```
-#### 原生js
+
+#### 原生 js
 
 ```javascript
-window.onload = function(){
+window.onload = function() {
   var winHeight = 0;
-  if (window.innerHeight){
-	winHeight = window.innerHeight;
-  }else if ((document.body) && (document.body.clientHeight)){
-	winHeight = document.body.clientHeight;
+  if (window.innerHeight) {
+    winHeight = window.innerHeight;
+  } else if (document.body && document.body.clientHeight) {
+    winHeight = document.body.clientHeight;
   }
   var html = document.getElementsByTagName('html')[0];
-  if(document.body.offsetHeight < windowHeight){
-	  html.style.height = windowHeight;
+  if (document.body.offsetHeight < windowHeight) {
+    html.style.height = windowHeight;
   }
 };
 ```

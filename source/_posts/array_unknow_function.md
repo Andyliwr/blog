@@ -49,7 +49,7 @@ reduce的回调函数接受四个参数
 `callback` 被调用四次，每次调用的参数和返回值如下表:
 
 | callback | accumulator | currentValue | currentIndex | array | return value |
-| :------- | :-------- - | :----------- | :----------- | :-----| :- ----------|
+| :------- | :---------- |- | :----------- | :----------- | :-----| :- ----------|
 | first call | 0 | 1 | 1 | [0, 1, 2, 3, 4] | 1 |
 | second call | 1 | 2 | 2 | [0, 1, 2, 3, 4] | 3 |
 | first call | 3 | 3 | 3 | [0, 1, 2, 3, 4] | 6 |
@@ -86,7 +86,7 @@ var countedNames = names.reduce(function (allNames, name) {
 ```
 
 ##### **兼容**
-| Feature | Chrome | Edge | Firefox |	Internet | Explorer |	Opera |	Safari |
-| :---| :---| :---| :---| :---| :---| :---| :---|
-| Basic | support |	Yes |	Yes |	3 |	9 |	10.5 | 4 |
+| Feature | Chrome  | Edge | Firefox | Internet | Explorer | Opera | Safari |
+| :------ | :------ | :--- | :------ | :------- | :------- | :---- | :----- |
+| Basic   | support | Yes  | Yes     | 3        | 9        | 10.5  | 4      |
 

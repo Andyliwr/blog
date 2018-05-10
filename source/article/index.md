@@ -2,7 +2,9 @@
 title: 记事列表
 date: 2017-12-10 19:29:00
 ---
+
 <script type="text/javascript" src="../scripts/loadListCss.js" defer="defer"></script>
+
 <div class="container 2017">
   <div class="header"><i class="icon-bookmark"></i>记事</div>
   <div class="content">

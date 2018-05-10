@@ -39,7 +39,7 @@ tags:
   ```
   vi ～/.ssh/myauth
   ## 输入如下内容，格式为[代理用户名]:[代理密码]
-  hexin:hx300033
+  xxx:xxx
   ```
   最后修改`~/.ssh/config`的`ProxyCommand`命令，在最后面加上认证文件的地址：
   ```

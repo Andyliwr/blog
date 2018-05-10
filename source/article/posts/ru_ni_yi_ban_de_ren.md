@@ -3,7 +3,7 @@ title: 我希望能有个如你一般的人
 date: 2017-09-27 21:22:00
 ---
 
-
+```
 我希望能有个如你一般的人
 如山间清爽的风
 如古城温暖的光
@@ -12,6 +12,7 @@ date: 2017-09-27 21:22:00
 只有最后是你就好
 
 ---《从你的全世界路过》
+```
 
 <audio src="https://fs.andylistudio.com/blog/article/congniquanshijieluguo.mp3" controls="controls"></audio>
 
