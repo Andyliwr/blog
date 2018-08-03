@@ -9,6 +9,12 @@ date: 2017-12-10 19:29:00
   <div class="header"><i class="icon-bookmark"></i>记事</div>
   <div class="content">
     <div class="link-item">
+      <a href="posts/xi_hong_shi_shou_fu.html" target="_blank">
+        <span class="title">西虹市首富</span>
+        <span class="des">一个为了金钱放弃爱的人会内疚一辈子</span>
+      </a>
+    </div>
+    <div class="link-item">
       <a href="posts/long_long_ago.html" target="_blank">
         <span class="title">无题</span>
         <span class="des">感觉已经一个世纪没写博客了</span>
