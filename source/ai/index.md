@@ -14,5 +14,17 @@ date: 2017-12-10 19:29:00
         <span class="des">What is neural network</span>
       </a>
     </div>
+    <div class="link-item">
+      <a href="posts/supervised-learning-for-neural-network.html" target="_blank">
+        <span class="title">监督学习</span>
+        <span class="des">Supervised Learning For Neural Network</span>
+      </a>
+    </div>
+    <div class="link-item">
+      <a href="posts/reasons_why_deep_learning_to_be_normal.html" target="_blank">
+        <span class="title">深度学习流行的原因</span>
+        <span class="des">Reasons Why Deep Learning To Be Normal</span>
+      </a>
+    </div>
   </div>
 </div>
