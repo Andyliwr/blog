@@ -26,5 +26,11 @@ date: 2017-12-10 19:29:00
         <span class="des">Reasons Why Deep Learning To Be Normal</span>
       </a>
     </div>
+    <div class="link-item">
+      <a href="posts/logistic.html" target="_blank">
+        <span class="title">logistic回归</span>
+        <span class="des">最简单的二分分类算法</span>
+      </a>
+    </div>
   </div>
 </div>

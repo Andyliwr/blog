@@ -9,6 +9,12 @@ date: 2017-12-10 19:29:00
   <div class="header"><i class="icon-bookmark"></i>记事</div>
   <div class="content">
     <div class="link-item">
+      <a href="posts/i_have_a_idea.html" target="_blank">
+        <span class="title">我突然有个想法</span>
+        <span class="des">不记下来我怕以后忘了</span>
+      </a>
+    </div>
+    <div class="link-item">
       <a href="posts/xi_hong_shi_shou_fu.html" target="_blank">
         <span class="title">西虹市首富</span>
         <span class="des">一个为了金钱放弃爱的人会内疚一辈子</span>
