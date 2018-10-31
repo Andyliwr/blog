@@ -3,7 +3,7 @@ layout: post
 title: Linux清除内存缓存
 date: 2018-10-29 15:32:01
 tags:
-  - Linux
+  - linux
 ---
 
 ### 前言
