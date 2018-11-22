@@ -36,7 +36,7 @@ if(window.location.href.indexOf('article/') < 0){
     }
     var bannerH = $('#header').height()
     var titles = $('.article').find('h3, h4, h5')
-    toc.find('a[href="#' + titles[0].id + '"]').parent().addClass('active')
+    if (titles[0]) toc.find('a[href="#' + titles[0].id + '"]').parent().addClass('active')
   
     return {
       fixed: function (top) {
