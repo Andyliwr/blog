@@ -3,7 +3,7 @@ title: 像我这样的人
 date: 2017-09-20 23:21:00
 ---
 
-<script type="text/javascript" src="../public/scripts/loadMusicCss.js" defer="defer"></script>
+<script type="text/javascript" src="https://fs.andylistudio.com/blog/static/scripts/loadListCss.js" defer="defer"></script>
 
 <div class="container">
     <div class="music">

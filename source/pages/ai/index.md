@@ -3,7 +3,7 @@ title: 人工智能学习
 date: 2017-12-10 19:29:00
 ---
 
-<script type="text/javascript" src="../../public/scripts/loadListCss.js" defer="defer"></script>
+<script type="text/javascript" src="https://fs.andylistudio.com/blog/static/scripts/loadListCss.js" defer="defer"></script>
 
 <div class="loading" style="text-align: center; padding: 20px 0;">
   <img src="https://fs.andylistudio.com/1542790509399.gif" style="width: 50px; display: inline-block; vertical-align: middle;" /> 文章加载中...
