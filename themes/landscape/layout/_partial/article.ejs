@@ -48,30 +48,29 @@
   <script>
     window.onload = function(){
       var pageId = document.querySelector('.article').id
-      // 判断域名
-      if(window.location.host === 'andyliwr.github.io'){
-        var gitalk = new Gitalk({
-          // id: pageId, // 可选。默认为 location.href
-          clientID: 'ad6f70df0c70d2b715f9',
-          clientSecret: '40384bee244c1e17dd7c37733d21e9ef669e969c',
-          repo: 'Andyliwr.github.io',
-          owner: 'Andyliwr',
-          admin: ['Andyliwr'],
-          distractionFreeMode: false
-        })
-        gitalk.render('comments')
-      }else if(window.location.host === 'www.andylistudio.com'){
-        var gitalk = new Gitalk({
-          // id: pageId, // 可选。默认为 location.href
-          clientID: '2790c4c9522929c268a5',
-          clientSecret: '24c06ea2621f6e1f1a833119a8cc87d1bc272242',
-          repo: 'Andyliwr.github.io',
-          owner: 'Andyliwr',
-          admin: ['Andyliwr'],
-          distractionFreeMode: false
-        })
-        gitalk.render('comments')
-      }
+      var gitalk = new Gitalk({
+        // id: pageId, // 可选。默认为 location.href
+        clientID: 'ad6f70df0c70d2b715f9',
+        clientSecret: '40384bee244c1e17dd7c37733d21e9ef669e969c',
+        repo: 'Andyliwr.github.io',
+        owner: 'Andyliwr',
+        admin: ['Andyliwr'],
+        id: md5(location.pathname),
+        distractionFreeMode: 'true'
+      })
+      gitalk.render('comments')
+
+      // www.andylistudio.com
+      // var gitalk = new Gitalk({
+      //  // id: pageId, // 可选。默认为 location.href
+      //  clientID: '2790c4c9522929c268a5',
+      //  clientSecret: '24c06ea2621f6e1f1a833119a8cc87d1bc272242',
+      //  repo: 'Andyliwr.github.io',
+      //  owner: 'Andyliwr',
+      //  admin: ['Andyliwr'],
+      //  distractionFreeMode: false
+      //})
+      //gitalk.render('comments')
     }
   </script>
 <% } %>
