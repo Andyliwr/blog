@@ -3,7 +3,7 @@ title: 音乐列表
 date: 2017-09-18 16:42:21
 ---
 
-<script type="text/javascript" src="https://fs.andylistudio.com/blog/static/scripts/loadListCss.js" defer="defer"></script>
+<script type="text/javascript" src="https://fs.andylistudio.com/blog/v2/static/scripts/loadListCss.js" defer="defer"></script>
 
 <div class="container 2017">
     <div class="header"><i class="icon-bookmark"></i>分享</div>
