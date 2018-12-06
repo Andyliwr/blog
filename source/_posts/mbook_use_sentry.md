@@ -58,21 +58,21 @@ cnpm install raven --save
 3. 修改 koa 中的 app.js
 
 ```javascript
-var Raven = require('raven')
+var Raven = require('raven');
 // 填写生成的日志上传地址
-Raven.config('http://44cbd1e49f7b4e88847a1c22a279ad45@localhost:9000/2').install()
+Raven.config('http://44cbd1e49f7b4e88847a1c22a279ad45@localhost:9000/2').install();
 
 // koa错误处理
 app.on('error', (err, ctx) => {
-  console.error('server error', err)
+  console.error('server error', err);
   // 上传错误日志
   Raven.setContext({
     user: ctx
-  })
+  });
   Raven.captureException(err, function(err, eventId) {
-    console.log('Reported error ' + eventId)
-  })
-})
+    console.log('Reported error ' + eventId);
+  });
+});
 ```
 
 4.  监控错误截图
@@ -81,24 +81,24 @@ app.on('error', (err, ctx) => {
 
 ### sentry 配合小程序
 
-sentry 不能直接支持小程序的，需要使用一个额外的包，下载地址：https://github.com/youzan/raven-weapp
+sentry 不能直接支持小程序的，需要使用一个额外的包，下载地址：[raven-weapp](https://github.com/youzan/raven-weapp)
 将源码下载到小程序代码目录下，引入并初始化
 
 ```javascript
-const Raven = require('./raven.min.js')
+const Raven = require('./raven.min.js');
 Raven.config('http://9860e45722b3427586db2a0514edd00c@localhost:9000/3', {
   release: 'v1.11.0',
   environment: 'production', // 指定为production才会上报
   allowDuplicates: true, // 允许相同错误重复上报
   sampleRate: 0.5 // 采样率
-}).install()
+}).install();
 
 /*
  * 微信小程序错误上报函数
  */
 const debug = message => {
-  Raven.captureException(message, { level: 'error' })
-}
+  Raven.captureException(message, { level: 'error' });
+};
 ```
 
 ![小程序错误](https://fs.andylistudio.com/1540699864079.png)

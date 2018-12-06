@@ -5,7 +5,7 @@
 # Site
 title: 月光倾城的代码小屋
 subtitle: 处在阳光中就能看见太阳，不是吗？
-description: andyliwr, 未来的大前端, 李迪康
+description: 处在阳光中就能看见太阳，不是吗？
 author: Dikang Li
 language: zh-CN
 timezone:
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: cactus
 
 # 评论
 gitalk: true
