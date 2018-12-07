@@ -60,7 +60,7 @@ logo:
   enabled: true
   width: 50
   height: 50
-  url: /images/logo.png
+  url: https://fs.andylistudio.com/1544183173428.ico
   gravatar: false
 
 # Customize the favicons.
