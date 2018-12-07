@@ -1,5 +1,6 @@
 ##############################################################################
 # Content
+fancybox: true
 ##############################################################################
 
 # Link to a page that gives an overview of all your projects.
@@ -17,8 +18,10 @@ nav:
   home: /
   about: /about/
   articles: /archives/
-  projects: projects_url
-
+  search: /search/
+  标签: /tags/
+  随笔: /articles/
+  音乐: /music/
 
 # Links to your social media accounts.
 # The keys should correspond to Fontawesome icon names
@@ -26,9 +29,7 @@ nav:
 # only 'mail' is an exception.
 social_links:
   github: http://github.com/Andyliwr
-  twitter: /
-  facebook: /
-  linkedin: /
+  qq: tencent://message/?uin=121960425&Site=400301.com&Menu=yes
   mail: andyliwr@outlook.com
 
 # Customize the overview with displaying a tagcloud on the index page.
@@ -119,17 +120,21 @@ disqus:
   enabled: false
   shortname: cactus-1
 
+gitalk:
+  enabled: true
+  shortname: cactus-1
+
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
   enabled: false
-  id: UA-86660611-1
+  id: UA-116568676-1
 
 # Fill in your Baidu Analytics tracking ID to enable Baidu Analytics.
 baidu_analytics:
-  enabled: false
-  id: 2e6da3c375c8a87f5b664cea6d4cb29c
+  enabled: true
+  id: 7851ca7a86be957be994acb77639a5be
 
 # Fill in you Gravatar user id / email if you want to use your gravatar as the
 # logo and/or favicons of you website.
 gravatar:
-  email: name@email.com
+  email: andyliwr@outlok.com

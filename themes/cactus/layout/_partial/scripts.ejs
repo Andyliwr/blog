@@ -1,6 +1,11 @@
 <!-- jquery -->
 <%- js('lib/jquery/jquery.min') %>
 <%- js('lib/justified-gallery/js/jquery.justifiedGallery.min.js') %>
+<%- js('lib/fancybox/jquery.fancybox.pack') %>
+<% if(theme.gitalk.enabled){ %>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+<script src="https://unpkg.com/gitalk@1.4.1/dist/gitalk.min.js"></script>
+<% } %>
 <%- js('js/main') %>
 <!-- search -->
 <% if (config.search && (page.search || page.type === "search")){ %>
@@ -75,4 +80,22 @@
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         }());
     </script>
+<% } %>
+<% if (theme.gitalk.enabled){ %>
+  <script type="text/javascript">
+    window.onload = function(){
+      if (window.location.href.indexOf('andyliwr.github.io') > -1) {
+        var gitalk = new Gitalk({
+          clientID: 'ad6f70df0c70d2b715f9',
+          clientSecret: '40384bee244c1e17dd7c37733d21e9ef669e969c',
+          repo: 'Andyliwr.github.io',
+          owner: 'Andyliwr',
+          admin: ['Andyliwr'],
+          id: md5(location.pathname),
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk_thread')
+      }
+    }
+  </script>
 <% } %>
