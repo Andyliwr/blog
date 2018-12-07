@@ -18,6 +18,8 @@
               <%- tagcloud({min_font: 12, max_font: 30, amount: 300}) %>
             </div>
           </div>
+        <% } else if (page.others || page.type === "others") { %>
+          <%- partial('_partial/others') %>
         <% } else if (page.type === 'categories') { %>
           <div id="categories">
             <div class="category-list-title">
