@@ -28,7 +28,7 @@ nav:
 social_links:
   github: http://github.com/Andyliwr
   qq: tencent://message/?uin=121960425&Site=400301.com&Menu=yes
-  mail: andyliwr@outlook.com
+  mail: mailto:andyliwr@outlook.com
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
