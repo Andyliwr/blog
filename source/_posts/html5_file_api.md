@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Html5 File API详解
+title: Html5 File API详解[转载]
 comments: true
 tags:
   - default
@@ -109,6 +109,68 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
 
 点击这里查看[demo](https://codepen.io/Andyliwr/pen/KbPbVV)
 
-### 结束
+### FileReader
+当获取了 `File` 引用后，实例化 `FileReader` 对象，以便将其内容读取到内存中。加载结束后，将触发读取程序的 `onload` 事件，而其 `result` 属性可用于访问文件数据。
+FileReader 包括四个异步读取文件的选项：
++ FileReader.readAsBinaryString(Blob|File) - result 属性将包含二进制字符串形式的 file/blob 数据。每个字节均由一个 [0..255] 范围内的整数表示。
++ FileReader.readAsText(Blob|File, opt_encoding) - result 属性将包含文本字符串形式的 file/blob 数据。该字符串在默认情况下采用“UTF-8”编码。使用可选编码参数可指定其他格式。
++ FileReader.readAsDataURL(Blob|File) - result 属性将包含编码为数据网址的 file/blob 数据。
++ FileReader.readAsArrayBuffer(Blob|File) - result 属性将包含 ArrayBuffer 对象形式的 file/blob 数据。
+  
+对您的 FileReader 对象调用其中某一种读取方法后，可使用 `onloadstart`、`onprogress`、`onload`、`onabort`、`onerror` 和 `onloadend` 跟踪其进度。
 
+下面的示例从用户选择的内容中过滤掉了图片，对文件调用 reader.readAsDataURL()，并通过将“src”属性设为数据网址来呈现缩略图。
+
+```html index.html
+<style>
+  .thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+  }
+</style>
+
+<input type="file" id="files" name="files[]" multiple />
+<output id="list"></output>
+
+<script>
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          var span = document.createElement('span');
+          span.innerHTML = ['<img class="thumb" src="', e.target.result,
+                            '" title="', escape(theFile.name), '"/>'].join('');
+          document.getElementById('list').insertBefore(span, null);
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+</script>
+```
+点击这里查看[demo](https://codepen.io/Andyliwr/pen/dwojPx)
+
+#### 文件分割以及监控文件读取进度
+对于大文件的上传，可以使用File接口分割文件，然后分布上传到服务器，由服务器组件负责按正确顺序重建文件，此外使用onloadstart 和 onprogress 事件可用于监控读取进度，点击这里[查看详情](https://www.html5rocks.com/zh/tutorials/file/dndfiles/)
+
+### 结束
+文章转载于 [通过 File API 使用 JavaScript 读取文件](https://www.html5rocks.com/zh/tutorials/file/dndfiles/)
 如果你有更好的建议或者困惑的地方，都可以发送邮件到我的邮箱 - [andyliwr@outlook.com](andyliwr@outlook.com)
