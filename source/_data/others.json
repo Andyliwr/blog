@@ -10,6 +10,10 @@
   },
   { "nav_name": "React学习笔记", "articles": [{ "article_name": "React学习笔记之20181121", "article_des": "最开始的都最艰难", "article_link": "/others/react/20181121.html", "time": "2018-11-21" }] },
   {
+    "nav_name": "leetcode",
+    "articles": [{ "article_name": "Two Sum", "article_des": "求数组中的两个数之和等于特定值的数的索引", "article_link": "/others/leetcode/two_sum.html", "time": "2019-01-18" }]
+  },
+  {
     "nav_name": "音乐",
     "articles": [
       { "article_name": "童话(自唱)", "article_des": "世界上有很多东西都能通过艰苦奋斗得到，唯独爱不行", "article_link": "http://node.kg.qq.com/play?s=zGX8o4zGoNGsdzGN&g_f=personal", "time": "2016-02-08" },
