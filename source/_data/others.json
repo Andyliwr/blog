@@ -10,6 +10,10 @@
   },
   { "nav_name": "React学习笔记", "articles": [{ "article_name": "React学习笔记之20181121", "article_des": "最开始的都最艰难", "article_link": "/others/react/20181121.html", "time": "2018-11-21" }] },
   {
+    "nav_name": "leetcode",
+    "articles": [{ "article_name": "Two Sum", "article_des": "求数组中的两个数之和等于特定值的数的索引", "article_link": "/others/leetcode/two_sum.html", "time": "2019-01-18" }]
+  },
+  {
     "nav_name": "音乐",
     "articles": [
       { "article_name": "童话(自唱)", "article_des": "世界上有很多东西都能通过艰苦奋斗得到，唯独爱不行", "article_link": "http://node.kg.qq.com/play?s=zGX8o4zGoNGsdzGN&g_f=personal", "time": "2016-02-08" },
@@ -41,6 +45,7 @@
       { "article_name": "无题", "article_des": "感觉已经一个世纪没写博客了", "article_link": "/others/article/long_long_ago.html", "time": "2018-04-13" },
       { "article_name": "西虹市首富", "article_des": "一个为了金钱放弃爱的人会内疚一辈子", "article_link": "/others/article/xi_hong_shi_shou_fu.html", "time": "2018-08-03" },
       { "article_name": "我突然有个想法", "article_des": "不记下来我怕以后忘了", "article_link": "/others/article/i_have_a_idea.html", "time": "2018-08-06" },
+      { "article_name": "2018年杭州的第一场雪", "article_des": "这已经是我在杭州过的第三个冬天了", "article_link": "/others/article/2018_snow_in_hangzhou.html", "time": "2018-12-08" },
       { "article_name": "2018年终总结", "article_des": "别辜负青春", "article_link": "/others/article/2018_summary.html", "time": "2018-12-31" }
     ]
   }

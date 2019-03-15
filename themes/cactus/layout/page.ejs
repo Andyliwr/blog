@@ -19,7 +19,9 @@
           </div>
         </div>
       <% } else if (page.others || page.type === "others") { %>
-        <%- partial('_partial/others') %>
+        <div class="others">
+          <%- partial('_partial/others') %>
+        </div>
       <% } else if (page.type === 'categories') { %>
         <div id="categories">
           <div class="category-list-title">
