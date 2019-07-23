@@ -3,7 +3,7 @@ layout: post
 title: 入职有赞的第三天
 comments: true
 tags:
-  - default
+  - 有赞
 photos:
   - 'https://img.vim-cn.com/59/d7f8814d0f67906eee5ab7c3e0a2ee00bb2f26.jpg'
 date: 2019-07-22 15:42:47
