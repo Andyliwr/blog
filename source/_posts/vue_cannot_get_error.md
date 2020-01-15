@@ -12,17 +12,17 @@ tags:
 
 1.  浏览器中无法呈现已有页面,并且在浏览器控制台中报 404 错误
 
-![chrom报错](https://fs.andylistudio.com/blog/post03/error.png/default)
+![chrom报错](https://file.lantingshucheng.com/blog/post03/error.png/default)
 
 2.  `npm run dev`命令行窗口没有报错
 
-![控制台输出](https://fs.andylistudio.com/blog/post03/console.png/default)
+![控制台输出](https://file.lantingshucheng.com/blog/post03/console.png/default)
 
 #### 原因
 
 网上查了下，有人说是路由配置问题（开启了`history`模式，而`history`模式需要服务端支持），然后我的代码没有开启`history`模式。于是找同事要了份代码全文对比，发现是配置信息导致:
 
-![webpack配置](https://fs.andylistudio.com/blog/post03/code.png/default)
+![webpack配置](https://file.lantingshucheng.com/blog/post03/code.png/default)
 
 注释部分是打包时需要修改的地方(根据打包时网站根目录,这个没处理好可能会出现图片路径加载失败问题),而上面才是在开发环境下需要的配置信息(怪自己没留意,坑了自己),之后就可以正常跑了...
 

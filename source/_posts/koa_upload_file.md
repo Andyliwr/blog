@@ -41,7 +41,7 @@ script(type='text/javascript', src='//cdn.bootcss.com/jquery/3.3.1/jquery.min.js
 script(type='text/javascript', src='/javascripts/index.js')
 ```
 
-![上传页面](https://fs.andylistudio.com/1533290091381.png)
+![上传页面](https://file.lantingshucheng.com/1533290091381.png)
 
 ### 监听上传按钮点击事件
 
@@ -79,7 +79,7 @@ $(document).ready(function() {
 });
 ```
 
-![console](https://fs.andylistudio.com/1533290269096.png)
+![console](https://file.lantingshucheng.com/1533290269096.png)
 
 ### 后端代码
 
@@ -107,4 +107,4 @@ router.post('/word-to-html', async (ctx, next) => {
 });
 ```
 
-![后端接受参数](https://fs.andylistudio.com/1533292320020.png)
+![后端接受参数](https://file.lantingshucheng.com/1533292320020.png)

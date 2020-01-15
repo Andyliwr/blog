@@ -14,7 +14,7 @@ toc: true
 #### 阅读器页面分享
 
 就是在阅读章节的时候选择分享，分享出去的图片应当展示的信息包括：书籍封面、书籍名称、章节名称、以及部分章节内容
-![章节分享](https://fs.andylistudio.com/1524545631717.png/800x400)
+![章节分享](https://file.lantingshucheng.com/1524545631717.png/800x400)
 
 #### 书籍详情页分享
 
@@ -152,7 +152,7 @@ const client = qn.create({
   accessKey: config.accessKey,
   secretKey: config.secretKey,
   bucket: 'upload',
-  origin: 'https://fs.andylistudio.com',
+  origin: 'https://file.lantingshucheng.com',
 });
 ```
 
@@ -174,4 +174,4 @@ client.upload(canvas.toBuffer(), {key: 'mbook/share/' + uuid.v1() + '.png' }, fu
 ### 效果图
 
 是不是感觉还可以，哈哈~，完整代码请参考[这里](https://github.com/AndyliStudio/mbook-koa/blob/master/api/other.js)
-![效果图](https://fs.andylistudio.com/mbook/share/fa4d3d10-463f-11e8-8a01-25d148dab515.png)
+![效果图](https://file.lantingshucheng.com/mbook/share/fa4d3d10-463f-11e8-8a01-25d148dab515.png)

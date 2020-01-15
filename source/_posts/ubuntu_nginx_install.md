@@ -72,7 +72,7 @@ useradd -g  www www -s /bin/false
 #### 6. 配置防火墙
 
 如果是使用的腾讯服务器，只需要在服务器管理平台添加 80 端口的安全组就好
-![腾讯云安全组](https://fs.andylistudio.com/blog/tengxunyun.jpg/default)
+![腾讯云安全组](https://file.lantingshucheng.com/blog/tengxunyun.jpg/default)
 服务器则可以设置防火墙：
 
 ```bash

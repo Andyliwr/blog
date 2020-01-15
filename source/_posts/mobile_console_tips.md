@@ -64,4 +64,4 @@ function createLog(log) {
 2.  以后在使用`console.log`的时候变成`createLog(xxx)`
 
 运行截图
-![手机上的效果](https://fs.andylistudio.com/blog/post04/result.png/default)
+![手机上的效果](https://file.lantingshucheng.com/blog/post04/result.png/default)

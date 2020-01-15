@@ -12,7 +12,7 @@ tags:
 
 #### 原理图
 
-![nodejs爬虫原理图](https://fs.andylistudio.com/myblog/wlpc.png/default)
+![nodejs爬虫原理图](https://file.lantingshucheng.com/myblog/wlpc.png/default)
 
 **github 项目地址**: [networkReptile](https://github.com/AndyliStudio/myApp/tree/master/nodeServer/server/networkReptile)
 

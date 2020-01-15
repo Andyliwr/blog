@@ -12,7 +12,7 @@ hexo 是一个优秀的博客工具，通过将 markdown 文件转化成静态�
 
 点击进入[node.js 官网](https://nodejs.org/en/)
 
-![](https://fs.andylistudio.com/blog/post001/post-1-01.png/default)
+![](https://file.lantingshucheng.com/blog/post001/post-1-01.png/default)
 
 目前 node.js 有两个推荐版本，分为通用版和最新版，点击可直接进行下载。下载好后，按照既定的套路安装即可。
 
@@ -32,7 +32,7 @@ hexo
 
 如果出现如下输出，说明 hexo 安装成功。
 
-![](https://fs.andylistudio.com/blog/post001/post-1-02.png/default)
+![](https://file.lantingshucheng.com/blog/post001/post-1-02.png/default)
 
 #### 3. **安装博客依赖**
 
@@ -49,10 +49,10 @@ npm install
 hexo server
 ```
 
-![](https://fs.andylistudio.com/blog/post001/post-1-05.png/default)
+![](https://file.lantingshucheng.com/blog/post001/post-1-05.png/default)
 在浏览器中打开`http://localhost:4000`就能看到在本地启动的博客了。
 
-![](https://fs.andylistudio.com/blog/post001/post-1-06.png/default)
+![](https://file.lantingshucheng.com/blog/post001/post-1-06.png/default)
 
 #### 4. **新建博客文章**
 
@@ -63,11 +63,11 @@ hexo new "文章标题"
 
 我们可以在本地博客文件夹`source->_post`文件夹下看到我们新建的 markdown 文件。
 
-![](https://fs.andylistudio.com/blog/post001/post-1-03.png/default)
+![](https://file.lantingshucheng.com/blog/post001/post-1-03.png/default)
 
 用 Markdown 编辑器打开文件，我们可以看到这样的内容：
 
-![](https://fs.andylistudio.com/blog/post001/post-1-04.png/default)
+![](https://file.lantingshucheng.com/blog/post001/post-1-04.png/default)
 
 编辑完刷新页面就能看到改动。
 

@@ -18,4 +18,4 @@ updated: 2018-12-08 11:29:58
 
 回归主题，这已经是我在杭州度过的第三个冬天，不知道还会在杭州呆多久，不知道接下来是留在同花顺，还是去另一个地方。就像这漫天飞舞的雪花，不知道自己将要落在何地。还有那个陪我到老的人，究竟什么时候才会出现，我们会以怎样的方式见面，在哪里见面。这一年里我学了好多东西，我不敢保证自己能以一个王子的身份遇见你，但是我会尽我所能把自己打造得更好，希望那个时候你倾心与我，我也能爱你入骨。
 
-{% video <iframe width="560" height="315" src="https://fs.andylistudio.com/1544261721376-420a1140-7b11-4583-89f4-dc097bb31797.mp4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe> %}
+{% video <iframe width="560" height="315" src="https://file.lantingshucheng.com/1544261721376-420a1140-7b11-4583-89f4-dc097bb31797.mp4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe> %}

@@ -18,18 +18,18 @@ ssh-keygen -t rsa -C "andyliwr@outlook.com"
 ```
 
 在要求输入密码的时候直接按 enter 就好了，免得每次登陆都需要输入额外的密钥密码。新生成的密码的地址在`console`了可以看到。
-![生成密钥](https://fs.andylistudio.com/blog/post20171017_01.png/default)
+![生成密钥](https://file.lantingshucheng.com/blog/post20171017_01.png/default)
 查看公钥内容，并复制。
 
 ```
 cat /c/Users/andyliwr/.ssh/id_rsa.pub
 ```
 
-![查看密钥](https://fs.andylistudio.com/blog/post20171017_02.png/default)
+![查看密钥](https://file.lantingshucheng.com/blog/post20171017_02.png/default)
 
 接下来就是把密钥绑定到腾讯云服务器了。首先登陆腾讯云的控制台。因为在绑定密钥的时候服务器必须处于关机状态，所以我们先将服务器关机。然后点击“ssh 密钥” -> “添加” -> 选择“使用已有公钥” -> 输入密钥名称 ，以及描述 -> 点击“添加”。接着“选择绑定/解绑云主机”将密钥绑定到指定的服务器上。绑定成功之后将服务器开机，如果之前有些守护进程在服务器上跑，开机之后记得将它们恢复。
 
-![控制台绑定密钥](https://fs.andylistudio.com/blog/post20171017_03.png/default)
+![控制台绑定密钥](https://file.lantingshucheng.com/blog/post20171017_03.png/default)
 
 接下来就是使用`sublime`的`sftp`插件连接服务器了。需要注意的是`sftp`插件在`windows`上并不识别 linux 的`.pub`形式的密钥 ，所以我们需要使用`puttygen`将密钥转换成`.ppk`形式的密钥。点击[这里](https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi)下载`puttygen`。
 

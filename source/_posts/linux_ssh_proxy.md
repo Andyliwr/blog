@@ -47,4 +47,4 @@ tags:
   ```
 3. **启动ssh连接**
   因为已经设置别名，所以我们可以直接通过`ssh txy`的方式启动ssh连接
-  ![ssh](https://fs.andylistudio.com/blog/2018_01_12ssh.png)
+  ![ssh](https://file.lantingshucheng.com/blog/2018_01_12ssh.png)

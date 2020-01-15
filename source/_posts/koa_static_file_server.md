@@ -20,7 +20,7 @@ Koa 中间件-`koa-static`能将项目的某个目录（一般是`static`或者`
 
 ### 中间件
 
-![最后的效果图](https://fs.andylistudio.com/1525692676116.png)
+![最后的效果图](https://file.lantingshucheng.com/1525692676116.png)
 
 #### static.js
 

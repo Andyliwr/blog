@@ -10,12 +10,12 @@ tags:
 
 今天记录下自己处理线上服务器内存不足的问题的过程。
 某天 xxx 跟我说线上服务器现在很卡，接口响应比较慢。我就纳闷了一个 2G 内存的服务器能支持 4000 千的访问量吗？不过还是得去看下，当我敲下`free -m`看到了如下信息：
-![内存使用情况](https://fs.andylistudio.com/1540800401850.png)
+![内存使用情况](https://file.lantingshucheng.com/1540800401850.png)
 
 ### 如何清除
 
 火速去查了下`free -m`各自代表的意思，答案如下：
-![字段说明](https://fs.andylistudio.com/1540802248956.png)
+![字段说明](https://file.lantingshucheng.com/1540802248956.png)
 
 > 为了提高磁盘存取效率，Linux 做了一些精心的设计，除了对 dentry 进行缓存（用于 VFS，加速文件路径名到 inode 的转换），还采取了两种主要 Cache 方式：Buffer Cache 和 Page Cache。前者针对磁盘块的读写，后者针对文件 inode 的读写。这些 Cache 有效缩短了 I/O 系统调用（比如 read，write，getdents）的时间。
 > 摘抄至 http://www.linuxde.net/2011/07/402.html

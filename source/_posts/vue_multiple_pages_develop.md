@@ -149,7 +149,7 @@ watch: {
 ### 验证码组件
 
 活动页面有一个弹窗需要用户输入对方的邀请码，样子如下：
-![邀请码](https://fs.andylistudio.com/blog/2018/02/12/invite_alert.PNG)
+![邀请码](https://file.lantingshucheng.com/blog/2018/02/12/invite_alert.PNG)
 
 实现的原理如下，将 input 定义在 label 里，然后将 input 隐藏（这里 android 和 ios 的处理方法不一样），最后在 label 中添加 ul，每当输入一个字符串，就把 ul 中的一个 li 的值改成新输入的值。我这里没有实现方块里的光标提示的功能，这个要实现得话估计得自己模拟光标了。
 

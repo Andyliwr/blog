@@ -45,7 +45,7 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
 2. 选择`excel`文件，accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 3. 选择`png`图片，accept="image/png"
 
-这里有一份各种文件类型对应的 accept 字段的[表格](https://fs.andylistudio.com/1544260274522.txt)，请收好~
+这里有一份各种文件类型对应的 accept 字段的[表格](https://file.lantingshucheng.com/1544260274522.txt)，请收好~
 
 ```html index.html
 <input type="file" id="files" name="files[]" multiple /> <output id="list"></output>

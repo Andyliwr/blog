@@ -63,7 +63,7 @@ new Vue({
 ```
 
 这样我们就建立了一个很简单的表格，它看上去就是这样：
-![简单的表格](https://fs.andylistudio.com/2018-12-08-15-35-35.png)
+![简单的表格](https://file.lantingshucheng.com/2018-12-08-15-35-35.png)
 
 接下来我们使用 sortable.js 让表格变得可拖动，在 vue 的 mounted 方法中初始化需要拖拽的表格（ps: 如果是在 `vue` 的 `created` 方法初始化，此时的 dom 没有挂载，会出现 document.querySelector 获取到的 dom 为 null 的情况），
 
@@ -126,7 +126,7 @@ const ThemeSchema = new mongoose.Schema(
 
 后端的排序接口的目的其实也就是在接受到前端的排序请求之后修改每行数据的 `priority` 值，假设我们接受的前端参数分别是 `from_index` 和 `to_index`，分别代码的意思是本次拖动排序过程用户将原来排在 from_index 的元素移动到了 to_index 的前面
 
-![拖动排序示意图1](https://fs.andylistudio.com/2018-12-08-16-19-38.png)
+![拖动排序示意图1](https://file.lantingshucheng.com/2018-12-08-16-19-38.png)
 
 所以我们只需要将原来排在 3 位置的元素的 priority 值改成 4，将原来排在 4 位置的元素的 priority 值改成 3，这样就完成了本次排序。
 当然这样只是跨越一个元素排序，如果 `from_index = n`，`to_index = m`，这样就能出现很多种情况：
@@ -135,7 +135,7 @@ const ThemeSchema = new mongoose.Schema(
 2. `n 小于 m`，这说明用户将元素后移了，这样我们需要排序第 n 位的元素的 priority 改成第 m 位元素的前一位(即 m-1 位)的 priority 值，然后将处在 n 到 m 位(区间是 `(n, m)`,两端的值都不能取 )的元素的 priority 值均减 1 就好了
 3. `n 大于 m`，这说明用户将元素前移了，这样我们需要排序第 n 位的元素的 priority 改成第 m 位元素的 priority 值，然后将处在 m 到 n 位(区间是 `[m, n)`, 右端的值不能取 )的元素的 priority 值均加 1 就好了
    
-![拖动排序示意图2](https://fs.andylistudio.com/2018-12-08-16-37-55.png)
+![拖动排序示意图2](https://file.lantingshucheng.com/2018-12-08-16-37-55.png)
 
 具体代码实现如下：
 ```js

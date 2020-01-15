@@ -9,19 +9,19 @@ toc: true
 reproduced: true
 ---
 
-![手写数字识别](https://fs.andylistudio.com/blog/2018_01_09/ai.png)
+![手写数字识别](https://file.lantingshucheng.com/blog/2018_01_09/ai.png)
 
 #### 机器学习中的“hello world!”
 
 就像我们学习编程语言一样，我们的第一个尝试就是在终端命令行中输出的 “Hello World”。机器学习中的 “Hello World” 便是识别手写字数据集。
-![数字](https://fs.andylistudio.com/blog/2018_01_09/ai1.png/default)
+![数字](https://file.lantingshucheng.com/blog/2018_01_09/ai1.png/default)
 想想在得到一张手写数字图片的数据之后如何分析出正确的数字？
 [keras-js 的实际 demo](https://transcranial.github.io/keras-js/#/mnist-cnn)
 
 #### 数据的表示和收集
 
 图片其实放大来看其实就是一个个像素点，对于黑白图像，每个像素点就只有黑白两种颜色以及黑白深度的区别，怎样用一种程序的方式来表达一张白底黑字的图像的像素点分布以及它的黑白深度呢？
-![图形的表示](https://fs.andylistudio.com/blog/2018_01_09/ai2.png/default)
+![图形的表示](https://file.lantingshucheng.com/blog/2018_01_09/ai2.png/default)
 如何将一张图转化成深度矩阵的格式是图像识别要做的，这是另一个广泛的课题，这里不展开。我们直接使用[MNIST 的数据集](http://yann.lecun.com/exdb/mnist/)，它的数据表示方式正如上面所描述的那样，只是 MNIST 数据集中每一张图片是包含 28 \* 28 个像素点的。
 
 确定了数据的表示方式，接下来我们还需要对每个数据的实际含义进行标识。
@@ -79,7 +79,7 @@ n(=1000)
 #### k-近邻算法概述
 
 在一个 10 \* 10 的二维平面内画一条线把它分成 2 个区域(A/B)。假设我们不知道线是如何画的，但现已知有 4 个点，a 点坐标是 (1, 1) 属于区域 A，b 点坐标是 (2, 2) 属于区域 A，c 点坐标是 (9, 9) 属于区域 B，d 点坐标是 (8, 8) 属于区域 B。这时候再给定一个 e 点坐标是 (8.5, 8.5) ，请问它最有可能在哪个区域内？
-![matlab](https://fs.andylistudio.com/blog/2018_01_09/ai3.png)
+![matlab](https://file.lantingshucheng.com/blog/2018_01_09/ai3.png)
 
 绝大多数人都会说“可能是 B”。我们是如何得出这个答案的？——因为它和 c, d “看起来更接近一些，更有可能在同一个区域”。同样的推论可以延伸至三维、四维甚至更多维度的数据中。MNIST 的数据表示就是 728 个特征的多纬数据，k-近邻算法同样适用。
 
@@ -87,12 +87,12 @@ n(=1000)
 > ——《机器学习实战》k 近邻算法
 
 两个向量之间的距离可以通过欧几里得距离公式求得：
-![欧几里得距离公式](https://fs.andylistudio.com/blog/2018_01_09/a4.png)
+![欧几里得距离公式](https://file.lantingshucheng.com/blog/2018_01_09/a4.png)
 
 #### k-近邻算法实现
 
 我们来使用 js 来实现 k-近邻算法（ps: 加了点注释，方便大家理解）
-![算法分析](https://fs.andylistudio.com/blog/2018_01_09/ai5.png)
+![算法分析](https://file.lantingshucheng.com/blog/2018_01_09/ai5.png)
 
 ```js
 /**
@@ -199,9 +199,9 @@ console.log(`Spend: ${(Date.now() - startTime) / 1000}s`);
 ```
 
 如无意外，你的终端将会输出这样的结果：
-![运行结果](https://fs.andylistudio.com/blog/2018_01_09/ai7.png)
+![运行结果](https://file.lantingshucheng.com/blog/2018_01_09/ai7.png)
 最终错误率的值大约是 5%。这个结果好吗？并不好。我们可以通过改变 k 的值、改变训练样本的数目影响 k-近邻算法的错误率，读者可以尝试改变这些变量值观察错误率的变化。实际上，只要将 k-近邻算法稍加改良，我们就能够把错误率降到 1% 以下！
-![更多的k-近邻算法](https://fs.andylistudio.com/blog/2018_01_09/ai6.png)
+![更多的k-近邻算法](https://file.lantingshucheng.com/blog/2018_01_09/ai6.png)
 
 我们也应该注意到的是，我们的算法在 8000 条训练数据集和 2000 条测试数据集上进行测试，运行了 325 秒！这是一个很差的结果。在实际生产环境中，我们不仅应该关注准确率也应该关注算法的执行效率。
 

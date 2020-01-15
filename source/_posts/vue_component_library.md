@@ -43,7 +43,7 @@ module.exports = {
 }
 ```
 
-![2019-07-23-18-46-07](https://fs.andylistudio.com/2019-07-23-18-46-07.png?imageView2/1/w/200/h/200)
+![2019-07-23-18-46-07](https://file.lantingshucheng.com/2019-07-23-18-46-07.png?imageView2/1/w/200/h/200)
 
 ### 编写一个Button组件
 
@@ -139,7 +139,7 @@ export default {
 ```
 效果应该就像下面这：
 
-![2019-07-22-17-58-06](https://fs.andylistudio.com/2019-07-22-17-58-06.png)
+![2019-07-22-17-58-06](https://file.lantingshucheng.com/2019-07-22-17-58-06.png)
 
 ### 使用`vue-cli-service`打包组件
 vue-cli提供vue-cli-service的命令行工具可以对vue组件进行打包，使用方式如下：
@@ -169,7 +169,7 @@ vue-cli提供vue-cli-service的命令行工具可以对vue组件进行打包，�
 
 ```
 最后运行的npm run build-component，生成的文件就像这样：
-![2019-07-23-11-25-49](https://fs.andylistudio.com/2019-07-23-11-25-49.png)
+![2019-07-23-11-25-49](https://file.lantingshucheng.com/2019-07-23-11-25-49.png)
 
 ### 上传到npm
 1. 修改`package.json`的name属性来定义npm包的名称，这里叫做`@andyliwr/vant-copy`
@@ -190,7 +190,7 @@ npm publish
 ```
 最后打开[npm官网](https://www.npmjs.com/)，就可以看到上传的npm包了
 
-![2019-07-23-11-31-46](https://fs.andylistudio.com/2019-07-23-11-31-46.png)
+![2019-07-23-11-31-46](https://file.lantingshucheng.com/2019-07-23-11-31-46.png)
 
 
 ### 结束

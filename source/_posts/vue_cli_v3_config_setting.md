@@ -170,7 +170,9 @@ module.exports = {
 ### 如何打包多个页面
 
 `vue-cli-v3.0` 新增了一个 `pages` 选项可以配置多个打包入口，代码的结构结构像这样：
-![项目代码结构](https://fs.andylistudio.com/2019-01-17-12-26-44.png)
+
+![项目代码结构](https://file.lantingshucheng.com/2019-01-17-12-26-44.png)
+
 上面写的 `vue.config.js` 会自动读取 `src/pages` 下的项目文件生成 `pages` 参数
 
 ```
@@ -183,7 +185,8 @@ module.exports = {
 ```
 
 打包之后的代码就像这样：
-![打包之后的代码](https://fs.andylistudio.com/2019-01-17-12-32-53.png)
+
+![打包之后的代码](https://file.lantingshucheng.com/2019-01-17-12-32-53.png)
 
 ### 结束
 

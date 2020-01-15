@@ -48,7 +48,7 @@ javascript 中，某个函数的参数数量是不固定的，因此要说适用
 因为在平时的工作中我遇到的几乎都是流程式的代码，很少涉及到对象编程。比如一段代码重复使用，我们就可以定义一个全局函数来复用代码。这样一直在使用全局(windows)来调用这个函数，根本就不会用到 call 或者 apply 去改变上下文。再比如我们在一个对象中定义对象的方法，基本上也不会涉及到其他对象需要调用这个对象的方法的场景。至于用 call 和 apply 实现继承就更别谈了。
 
 看看以前的 sb 做法：
-![](https://fs.andylistudio.com/blog/2018_01_12/mockapi.png)
+![](https://file.lantingshucheng.com/blog/2018_01_12/mockapi.png)
 
 #### call 和 apply 的用例
 

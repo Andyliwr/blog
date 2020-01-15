@@ -21,4 +21,4 @@ linux 为了避免每次设置权限的时候都写`dwxr-xr-x`这么一大段字
 快速给文件添加可执行权限的快捷命令是`chmod +x xxx`
 查看当前目录下所有文件和目录的权限的命令是`ls -lrth`
 
-![查看权限](https://fs.andylistudio.com/1533468211123.png)
+![查看权限](https://file.lantingshucheng.com/1533468211123.png)

@@ -33,10 +33,10 @@ updated: 2019-07-22 15:42:47
 ### 结束
 下面放些有赞工作的截图：
 <br> 
-![办公室](https://fs.andylistudio.com/2019-07-22-16-04-00.png)
+![办公室](https://file.lantingshucheng.com/2019-07-22-16-04-00.png)
 
-![工作台](https://fs.andylistudio.com/2019-07-22-16-03-07.png)
+![工作台](https://file.lantingshucheng.com/2019-07-22-16-03-07.png)
 
-![和螃蟹大哥、伴月大哥合影](https://fs.andylistudio.com/2019-07-22-16-04-41.png)
+![和螃蟹大哥、伴月大哥合影](https://file.lantingshucheng.com/2019-07-22-16-04-41.png)
 <br> 
 期待更好的自己～

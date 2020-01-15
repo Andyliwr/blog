@@ -13,7 +13,7 @@ tags:
 #### 书签 1
 
 先贴下效果图：
-![书签1](https://fs.andylistudio.com/1542074776058.png)
+![书签1](https://file.lantingshucheng.com/1542074776058.png)
 
 实现原理和之前实现箭头一样，都是使用的 `border` 来做出尖角，只不过这次某个边框不是整个不见了，而只是凹陷了一点点。
 
@@ -54,7 +54,7 @@ tags:
 #### 书签 2
 
 实现效果：
-![书签2](https://fs.andylistudio.com/1542075577294.png)
+![书签2](https://file.lantingshucheng.com/1542075577294.png)
 
 这个和上个其实没啥区别，只不过文字部分被写到了 `after` 伪元素的 `content` 属性中了，此外新加了一个 `before` 伪元素来实现书签的折角。
 

@@ -33,4 +33,4 @@ updated: 2019-03-21 09:52:17
 借助`Sync Setting`包，恢复`sublime`的设置，原理就是将设置同步到`github gist`中，所以需要自己设置一个`gistId`和`github token`
 
 ### sublime sftp下载不了？
-点击这里[下载](https://fs.andylistudio.com/loan/v2/SFTP.sublime-package),然后复制到sublime扩展包下面去
+点击这里[下载](https://file.lantingshucheng.com/loan/v2/SFTP.sublime-package),然后复制到sublime扩展包下面去

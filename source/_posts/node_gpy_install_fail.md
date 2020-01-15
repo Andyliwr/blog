@@ -9,8 +9,8 @@ tags:
 ### 前言
 
 不知道大家在 windows 下有没有遇到这种错误？明明包装得好好的说什么没有设置 python 环境变量，然后我到环境变量设置界面一看，python 变量都设置了呀，在 cmd 中`echo PATH`也能看到设置的 python 的环境变量。
-![npm 错误](https://fs.andylistudio.com/1524540596938.png/800x400)
-![系统环境变量](https://fs.andylistudio.com/1524544026718.png/800x400)
+![npm 错误](https://file.lantingshucheng.com/1524540596938.png/800x400)
+![系统环境变量](https://file.lantingshucheng.com/1524544026718.png/800x400)
 
 ### Node gpy
 
@@ -38,7 +38,7 @@ npm install --global --production windows-build-tools
 
 记得上述命令需要在 cmd(管理员)的环境中执行。
 
-![cmd](https://fs.andylistudio.com/1524545060774.png)
+![cmd](https://file.lantingshucheng.com/1524545060774.png)
 
 ### 参考文档
 

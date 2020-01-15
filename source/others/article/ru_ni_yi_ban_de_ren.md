@@ -14,6 +14,6 @@ date: 2017-09-27 21:22:00
 ---《从你的全世界路过》
 ```
 
-<audio src="https://fs.andylistudio.com/blog/article/congniquanshijieluguo.mp3" controls="controls"></audio>
+<audio src="https://file.lantingshucheng.com/blog/article/congniquanshijieluguo.mp3" controls="controls"></audio>
 
 这是我想请你看第一部电影，说实话当时这个决定真的整整想了一个周末，也许是太不希望错过你吧。不过最后被你狠心拒绝了，结果我一个人跑去影院了。我记得我们第一次看的电影---《奇异博士》，在上海大学的地大影院。记得你领着我走过的上大的路，记得那里的花展，记得和你一起逛过的杂货店，记得你送我的围巾。这一年里第一次去上海看你，没想到也是唯一一次。

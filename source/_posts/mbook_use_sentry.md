@@ -48,7 +48,7 @@ curl http://localhost:9000
 ### sentry 配合 Koa
 
 1. 在搭建好的创建一个 Nodejs 项目
-   ![创建项目](https://fs.andylistudio.com/1540698040385.png)
+   ![创建项目](https://file.lantingshucheng.com/1540698040385.png)
 2. 安装 raven 包
 
 ```
@@ -77,7 +77,7 @@ app.on('error', (err, ctx) => {
 
 4.  监控错误截图
     这个就是 sentry 监控到的错误结果...
-    ![监控错误截图](https://fs.andylistudio.com/1540698396271.png)
+    ![监控错误截图](https://file.lantingshucheng.com/1540698396271.png)
 
 ### sentry 配合小程序
 
@@ -101,4 +101,4 @@ const debug = message => {
 };
 ```
 
-![小程序错误](https://fs.andylistudio.com/1540699864079.png)
+![小程序错误](https://file.lantingshucheng.com/1540699864079.png)
