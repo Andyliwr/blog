@@ -7,14 +7,14 @@ tags:
 
 ### 前言
 
-#### 安装 Anaconda
+### 安装 Anaconda
 那么问题来了本地已经安装了`python`为啥还需要使用`Anaconda`呢？
 >1）Anaconda 附带了一大批常用数据科学包，它附带了 conda、Python 和 150 多个科学包及其依赖项。因此你可以立即开始处理数据。
 >2）管理包Anaconda 是在 conda（一个包管理器和环境管理器）上发展出来的。在数据分析中，你会用到很多第三方的包，而conda（包管理器）可以很好的帮助你在计算机上安装和管理这些包，包括安装、卸载和更新包。
 >3）管理环境为什么需要管理环境呢？比如你在A项目中用了 Python 2，而新的项目B老大要求使用Python 3，而同时安装两个Python版本可能会造成许多混乱和错误。这时候 conda就可以帮助你为不同的项目建立不同的运行环境。
 >4) Anaconda支持windows、linux、Mac，这点非常好，这意味着你在任何环境下都能使用anaconda来管理你的代码。并且Anaconda和vscode是合作关系，Anaconda在vscode中得到了很好的支持
 > 详情请参考[知乎问答](https://www.zhihu.com/question/58033789)
-#### linux下安装Anaconda
+### linux下安装Anaconda
 访问官网，复制出来anaconda linux版本的下载地址
 ```bash
 # 全局环境安装，所以还是切换到root账号比较靠谱

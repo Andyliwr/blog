@@ -6,11 +6,11 @@ tags:
  - tools
 ---
 
-#### 前言
+### 前言
 
 对 UI 稿切图可谓前端工程师的基本功了，今天来讲讲如何快速并且高效的切图。
 
-#### Cutterman 插件
+### Cutterman 插件
 
 `Cutterman`是一款运行在`photoshop`中的插件，能够自动将你需要的图层进行输出， 以替代传统的手工 "导出 web 所用格式" 以及使用切片工具进行挨个切图的繁琐流程。 它支持各种各样的图片尺寸、格式、形态输出，方便你在`pc`、`ios`、`Android`等端上使用。 它不需要你记住一堆的语法、规则，纯点击操作，方便、快捷，易于上手。
 
@@ -29,7 +29,7 @@ Cutterman 能够让你只需要点击一个按钮，就自动输出你需要的�
 
 安装方法：[下载地址](http://static.cutterman.cn/products/win/Cutterman_panel_3.5.0_201711141423.zip)，双击 exe 运行就好了，然后重启 ps，在“窗口”-->“扩展功能”-->“cutterman”就能看得到，勾选下就能在右边看到`cutterman`的界面。
 
-#### iconfont 导入 svg
+### iconfont 导入 svg
 
 iconfont 可以支持自己导入 svg，这样你就能将 UI 给的 PNG 切图做成酷炫的 iconfont 字体图标，随心所欲的改变字体图标颜色和大小了。
 

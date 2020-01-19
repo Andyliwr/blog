@@ -20,7 +20,7 @@ tags:
 > 为了提高磁盘存取效率，Linux 做了一些精心的设计，除了对 dentry 进行缓存（用于 VFS，加速文件路径名到 inode 的转换），还采取了两种主要 Cache 方式：Buffer Cache 和 Page Cache。前者针对磁盘块的读写，后者针对文件 inode 的读写。这些 Cache 有效缩短了 I/O 系统调用（比如 read，write，getdents）的时间。
 > 摘抄至 http://www.linuxde.net/2011/07/402.html
 
-#### 那么如何手动释放缓存呢？
+### 那么如何手动释放缓存呢？
 
 `/proc`是一个虚拟文件系统，我们可以通过对它的读写操作做为与`kernel`实体间进行通信的一种手段。也就是说可以通过修改`/proc`中的文件，来对当前`kernel`的行为做出调整。那么我们可以通过调整`/proc/sys/vm/drop_caches`来释放内存。操作如下：
 
@@ -38,7 +38,7 @@ sync && echo 3 > /proc/sys/vm/drop_caches
 
 此时在输入`free -m`就会发现 `buffer` 和 `cache` 均被释放了
 
-#### 为什么free那么小
+### 为什么free那么小
 因为`Linux`对内存的管理与`Windows`不同，`free`小并不是说内存不够用了，应该看的是`free`的第二行最后一个值：`-/+ buffers/cache: 58 191`，这才是系统可用的内存大小。
 
 既然核心是可以快速清空buffer或cache，也不难做到（这从上面的操作中可以明显看到），但核心并没有这样做（默认值是0），我们就不应该随便去改变它。一般情况下，应用在系统上稳定运行了，free值也会保持在一个稳定值的，虽然看上去可能比较小。

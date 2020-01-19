@@ -37,7 +37,7 @@ https://khtest.10jqka.com.cn/dev/lidikang/sg_cddh/index.html
 1.  每个弹窗文字、样式、按钮、按钮点击的回调、发送的埋点都不一样，如何统一管理
 2.  每个弹窗内容不一样，所以高度也不一样，如果使用 css 的 transform 或者 flex 布局使得弹窗居中当然很简单，但是低端设备就不行了，有没有更好的垂直水平居中方案？
 
-#### 弹窗状态管理
+### 弹窗状态管理
 
 触发打开弹窗的操作一般在具体的活动页面（当然也可能有点击之后触发一个新的弹窗，这个稍后再议），我们只需要将弹窗的标题，需要展示的 html，以及按钮文字，按钮点击触发的回调函数，这些自定义项传给 Alert 组件就好了。比如：
 
@@ -95,7 +95,7 @@ this.alert = {
 }
 ```
 
-#### 关闭弹窗功能(closeAlert)实现
+### 关闭弹窗功能(closeAlert)实现
 
 在弹窗的`container`上加上`v-show`的属性（这里为什么用 v-show 而不使用 v-if，稍后说），使用`data.show`的字段来控制弹窗的显隐，但是`data`是父级传给`Alert`的，在`Aler`t 组件中并不能直接修改`data`的值，所以需要和父级约定一个`closeAlert`的方法，在 Alert 组件中使用`this.$emit('close')`报告关闭弹窗的请求后，父级再接受到`close`的请求，并将传递给`Alert`的`data`值中的`show`改成`false`，这样就实现了弹窗的隐藏。
 
@@ -103,7 +103,7 @@ this.alert = {
 <alert :data="alert" @close="closeAlert"></alert>
 ```
 
-#### 如何在点击弹窗中的按钮触发一个新的弹窗
+### 如何在点击弹窗中的按钮触发一个新的弹窗
 
 实现原理其实和上面差不多，就是和父级约定一个`openNewAlert`的方法，在 Alert 组件中报告`openNewAlert`的事件，并把新的弹窗参数传递给父级。父级接收参数，并将传给 Alert 的参数改成新的参数。
 
@@ -121,7 +121,7 @@ openNewAlert(){
 }
 ```
 
-#### 如何使得弹窗居中
+### 如何使得弹窗居中
 
 在`css3`中使得一个不确定高度的盒子居中有很多方法，最常见的就是使用`transform`和`flex`布局，但是很遗憾，`transfrom`在`iphone5`和`android4.4`的测试机上行不通，`flex`布局哪怕兼容了-webkit-box 在`android4.1`上也没法使用。我们知道，如果我们清楚弹窗的高度，垂直居中就变得很简单，只需要将它的`margin-top`值设置为负的高度的一半就行。那能不能在弹窗弹出的瞬间动态计算它的高度，然后动态设置它的`margin-top`值呢？技术上是没问题的，vue 只要在需要获取的 dom 上加上`ref="xxx"`，在函数里就能通过`this.$refs.xxx.offsetHeight`来获取它的高度，但是这样有两个问题：
 

@@ -22,7 +22,7 @@ Koa 中间件-`koa-static`能将项目的某个目录（一般是`static`或者`
 
 ![最后的效果图](https://file.lantingshucheng.com/1525692676116.png)
 
-#### static.js
+### static.js
 
 在`utils`目录下新建静态资源处理的 js---`static.js`
 
@@ -158,7 +158,7 @@ module.exports = {
 
 > ps: 我把大神的代码合并了下，感觉新建五个 js 还是有点多。另外注意声明中间件的顺序，`api`的声明应当放在`static`中间件的前面，否则`api`声明的路由就都失效了
 
-#### router 中新增路由
+### router 中新增路由
 
 ```
 // 静态资源服务器

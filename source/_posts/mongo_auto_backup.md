@@ -8,7 +8,7 @@ toc: true
 reproduced: true
 ---
 
-#### 前言
+### 前言
 
 我欠博客一个解释，为啥这么久都不更新 😂，好吧，人变懒了...
 讲下最近我服务器出现的一个事吧，某日我为了方便查看数据，在腾讯云服务器上把 27017 端口给开放了，然后过了两天，需求方和我说小程序出了问题。我一查就发现数据库里的数据都被人删除光了 😭，而我正好又没做好备份，然后花了很长时间去重建数据。
@@ -17,7 +17,7 @@ reproduced: true
 
 不扯了，进入今天的主题吧---如何自动备份`mongo`。
 
-#### 介绍`mongodump`
+### 介绍`mongodump`
 
 `mongodump` 是 `MongoDB` 提供的一个工具，用于备份数据库，配合使用 `mongorestore`恢复工具使用。这套工具适合小型应用或开发环境。
 
@@ -32,7 +32,7 @@ mongorestore -h localhost:27017 -d mbook -u admin -p 123456 本地数据库地�
 mongodump -h localhost:27017 -d mbook -u admin -p 123456 -o 需要存储的本地目录
 ```
 
-#### 自动执行脚本
+### 自动执行脚本
 
 首先我们要创建一个执行备份工作的脚本。在 `~/crontab/` 下新建一个 `.sh` 文件：
 
@@ -71,7 +71,7 @@ chmod +x ~/crontab/mongod_bak.sh
 
 现在你可以试着执行一下`./mongod_bak.sh`，就会在备份文件夹中看到打包好的备份数据了。
 
-#### 自动运行
+### 自动运行
 
 备份脚本写好之后，就需要让它自动运行。直接使用 Linux 的 crontab 命令即可：
 
@@ -92,6 +92,6 @@ sudo /etc/init.d/cron restart
 chkconfig crond on  // 设为开机启动
 ```
 
-#### 结束
+### 结束
 
 文章摘抄至[全栈渐进之路](https://brickyang.github.io/2017/03/02/Linux-%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD-MongoDB/)

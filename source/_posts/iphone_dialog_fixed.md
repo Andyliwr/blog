@@ -19,7 +19,7 @@ tags:
 
 <div style="overflow: hidden; text-align: center"><div style="display: inline-block; width: 200px;"><img src="https://file.lantingshucheng.com/blog/post20170912_01.png/default"/><p style="text-align: center">错误的demo</p></div><div style="display: inline-block; width: 200px; margin-left: 40px"><img src="https://file.lantingshucheng.com/blog/post20170912_02.png/default"/><p style="text-align: center">正确的demo</p></div></div>
 
-#### **bug 产生的原因**
+### **bug 产生的原因**
 
 iphone 在键盘弹出的时候，页面的高度为屏幕高度减去键盘的高度，当 input 元素失去焦点，键盘的收起的 0.5s 内弹出了 alert 框，js 被停止执行，并且弹窗的 fixed 属性失效了。由于透明的黑色背景也是采用的 fixed 定位，所以在 fixed 失效的时透明的黑色背景的高度不会随着 body 的高度变大(键盘往下收缩，腾出来的空间显示页面)而变大。
 

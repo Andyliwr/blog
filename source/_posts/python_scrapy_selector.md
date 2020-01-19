@@ -6,14 +6,14 @@ tags:
  - 毕设
 ---
 
-#### 前言
+### 前言
 
 之前介绍了如何写一个最简单的爬虫，今天我们来讲一讲 scrapy 的选择器。 在爬虫程序的 parse 方法里，response 对象承载着爬虫爬取得到的最原始的数据，如何从这些混乱的数据中得到我们想要的数据就是接下来我们应该思考的。其实 python 爬虫和 nodejs 爬虫在这方面很类似，都是将原始数据传递给一个解析器，然后通过 xml 或者 html 的选择器去获取数据。只是不同的是，nodejs 是使用的是 cheerio 而 python 使用的是 xpath 或者 css。
 
 再介绍选择器之前介绍一个很实用的工具，它是 scrapy 自带的 shell 工具，通过输入`scrapy shell <url>`可以进入命令行模式，这样可以让你在不写爬虫程序的情况下测试你的选择器，例如：
 ![scrapy shell](http://ouizhbgin.bkt.clouddn.com/blog/2017/10/28/scrapy_shell.png)
 
-#### 选择器
+### 选择器
 
 scrapy 提供两种选择器 --- reponse.css()和 response.xpath()，作为前端我选择 css，因为熟悉。
 

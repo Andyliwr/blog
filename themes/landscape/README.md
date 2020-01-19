@@ -6,7 +6,7 @@ A brand new default theme for [Hexo].
 
 ## Installation
 
-#### Install
+### Install
 
 ``` bash
 $ git clone https://github.com/hexojs/hexo-theme-landscape.git themes/landscape
@@ -14,11 +14,11 @@ $ git clone https://github.com/hexojs/hexo-theme-landscape.git themes/landscape
 
 **Landscape requires Hexo 2.4 and above.**
 
-#### Enable
+### Enable
 
 Modify `theme` setting in `_config.yml` to `landscape`.
 
-#### Update
+### Update
 
 ``` bash
 cd themes/landscape
@@ -67,7 +67,7 @@ google_plus:
 
 ## Features
 
-#### Fancybox
+### Fancybox
 
 Landscape uses [Fancybox] to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.
 
@@ -77,7 +77,7 @@ Landscape uses [Fancybox] to showcase your photos. You can use Markdown syntax o
 {% fancybox img_url [img_thumbnail] [img_caption] %}
 ```
 
-#### Sidebar
+### Sidebar
 
 You can put your sidebar in left side, right side or bottom of your site by editing `sidebar` setting.
 
@@ -93,12 +93,12 @@ All of them are enabled by default. You can edit them in `widget` setting.
 
 ## Development
 
-#### Requirements
+### Requirements
 
 - [Grunt] 0.4+
 - Hexo 2.4+
 
-#### Grunt tasks
+### Grunt tasks
 
 - **default** - Download [Fancybox] and [Font Awesome].
 - **fontawesome** - Only download [Font Awesome].

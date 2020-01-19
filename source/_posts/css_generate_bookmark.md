@@ -6,11 +6,11 @@ tags:
  - CSS
 ---
 
-#### 前言
+### 前言
 
 之前讲过使用过[CSS 实现箭头](https://andyliwr.github.io/2018/06/14/css_generate_arrow/)，今天来讲使用 `CSS` 实现两种常用的书签，记录下实现过程。
 
-#### 书签 1
+### 书签 1
 
 先贴下效果图：
 ![书签1](https://file.lantingshucheng.com/1542074776058.png)
@@ -51,7 +51,7 @@ tags:
 }
 ```
 
-#### 书签 2
+### 书签 2
 
 实现效果：
 ![书签2](https://file.lantingshucheng.com/1542075577294.png)

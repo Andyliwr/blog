@@ -4,7 +4,7 @@ tags: 数据库
 
 ---
 
-#### 前言
+### 前言
 
 今天配置新后台的 mysql 数据库，新建了一个用户之后在本地可以登录，但是远程一直显示`access delay`,今天就来讲讲如何解决 mysql 本地可以登录但是远程不能登录的解决方案吧。
 ![mysql](https://file.lantingshucheng.com/blog/images/mysql.png/default)

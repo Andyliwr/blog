@@ -22,13 +22,13 @@ tags:
 
 linux 一直都是二进制分发，npm 为了方便干脆就直接源码分发，用户装的时候再现场编译。再看看错误输出，大致意思就是 node-gpy 需要使用到 python 去编译某个东西。但是在路径中又找不到可执行的 python 程序。
 
-#### 重新安装 Python
+### 重新安装 Python
 
 方法一：卸载 python，重新到[官网](https://www.python.org/downloads/windows/)下载一份安装，安装的时候记得勾选“添加 Python 至环境变量”
 
 安装好了之后再试试`npm install`
 
-#### Python 版本问题
+### Python 版本问题
 
 上面的方法试了之后还是不行的话，可能是 python 的版本引起的，试着换成 python2.7，或者运行下面的命令来安装默认版本：
 

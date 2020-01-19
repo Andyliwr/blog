@@ -6,15 +6,15 @@ tags:
   - 爬虫
 ---
 
-#### 前言
+### 前言
 
 在写 nodejs 爬虫的过程中，原网站可能会对某一时间段内集中访问该页面的 ip 进行封杀。那么如何动态设置每次爬取使用的 ip 地址以及浏览器头部信息呢？
 
-#### 动态 userAgent
+### 动态 userAgent
 
 这是我收集到的常用的浏览器头部信息，每次爬取的时候从中随机选取一个，并使用 superAgent 设置请求头部的 User-Agent 字段就好了。
 
-#### `userAgent.js`
+### `userAgent.js`
 
 ```js
 const userAgents = [
@@ -42,7 +42,7 @@ const userAgents = [
 module.exports = userAgents;
 ```
 
-#### `app.js`
+### `app.js`
 
 ```js
 import request from 'superagent';
@@ -60,12 +60,12 @@ async function doRequest() {
 }
 ```
 
-#### 动态 ip
+### 动态 ip
 
 设置动态 IP 需要用到一个 superagent 插件---[superagent-proxy](https://github.com/TooTallNate/superagent-proxy)，除此之外为了避免每次爬取时都去获取一次动态 IP 的列表，我将爬取到的动态 IP 列表存放在 redis 中，并设置 10 分钟的过期时间。数据过期之后再重新发送获取动态 IP 的请求。
 ps: 这里我使用的动态 IP 是[爬虫网络科技公司](http://www.pcdaili.com/)提供的免费代理，因为免费所以难免会有些缺陷。有时候使用他的代理 ip 并不能访问得通，我在后面会做单独的处理。
 
-#### `package.json`
+### `package.json`
 
 ```json
 {
@@ -103,7 +103,7 @@ ps: 这里我使用的动态 IP 是[爬虫网络科技公司](http://www.pcdaili
 }
 ```
 
-#### `app.js`
+### `app.js`
 
 ```js
 import request from 'superagent';

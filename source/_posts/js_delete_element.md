@@ -6,7 +6,7 @@ tags:
 
 JS 数组删除某个元素的方法实现的代码：
 
-#### 使用数组迭代
+### 使用数组迭代
 
 ```javascript
 function removeElement(arr, ele) {
@@ -31,11 +31,11 @@ function removeElement(arr, ele) {
 }
 ```
 
-#### 功能测试
+### 功能测试
 
 ![chrome console测试](http://img.blog.csdn.net/20170406112032782)
 
-#### 使用常规的数组方法 splice
+### 使用常规的数组方法 splice
 
 首先可以给 js 的数组对象定义一个函数，用于查找指定的元素在数组中的位置，即索引，代码为：
 

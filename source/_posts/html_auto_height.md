@@ -7,11 +7,11 @@ tags:
 
 在写 css 静态页面的时候让 Html 的高度自适应屏幕高度是一个常见的需求，比如你有一个需要置底的 bottom 按钮，需要在内容不足一屏的时候显示在屏幕的底部，在内容超过一屏的时候显示在所有内容的底部。
 
-#### **效果图：**
+### **效果图：**
 
 <img src="http://img.blog.csdn.net/20170405152117164" alt="不足一屏时自动移到最下面" style="width: 80%" />
 
-#### **CSS 的做法**
+### **CSS 的做法**
 
 ```html
 html {
@@ -58,11 +58,11 @@ footer {
 }
 ```
 
-#### **JS 的做法**
+### **JS 的做法**
 
 css 的做法有时候会在定位的时候造成一些麻烦，可以尝试使用 js 去动态改变 html 的高度
 
-#### 基于 zepto
+### 基于 zepto
 
 ```javascript
 $(document).ready(function() {
@@ -73,7 +73,7 @@ $(document).ready(function() {
 });
 ```
 
-#### 原生 js
+### 原生 js
 
 ```javascript
 window.onload = function() {

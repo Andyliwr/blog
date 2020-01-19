@@ -5,7 +5,7 @@ tags:
  - nodejs
 ---
 
-#### 前言
+### 前言
 
 在下载别人的源码的时候，一看 package.json 经常就能看到一串代码---NODE_ENV=development。这个东西到底是个啥？
 ![node_env](http://ouizhbgin.bkt.clouddn.com/blog/2017/11/03/node_env_package_json.png)
@@ -23,7 +23,7 @@ npm ERR! npm  v2.14.2
 
 于是经过一顿查找，我现在把我学到的一些东西记录下来。
 
-#### NODE_ENV 是什么
+### NODE_ENV 是什么
 
 NODE_ENV 其实就是一个环境变量，然后它的值等于`production`，意思就是启用生产环境。nodejs 程序在执行的时候可以通过`prosess.env`来获取已经设置的环境变量，下面请看截图：我创建了一个名为`app.js`的文件，让它输出`prosess.env`的值，然后分别放在 window 和 linux 下运行，结果如下：
 **app.js:**
@@ -43,7 +43,7 @@ console.log(prosess.env)
 * 安装 cross-env: `npm install cross-env --save-dev`
 * 修改 package.json，在`NODE_ENV=xxxxxxx`前面添加`cross-env`就可以了。
 
-#### **如何使用环境变量来记录密码这些敏感信息**
+### **如何使用环境变量来记录密码这些敏感信息**
 
 在一个项目中经常需要配置一些数据库密码，甚至使用`nodemail`的话需要配置邮箱密码，所以这种 config 文件一般都需要在`.gitignore`中忽略提交，但是如果`config`文件经常变动，不提交的话，代码又不好同步。于是我们就可以学习下`NODE_ENV`的做法，将密码等敏感信息写入环境变量，在`nodejs`程序中需要用到密码的时候，使用`prosess.env.xxx`去获取密码，请看下面实例：
 

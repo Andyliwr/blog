@@ -7,7 +7,7 @@ tags:
  - element
 ---
 
-#### 前言
+### 前言
 
 今天测试报告了广告竞价后台的一个`bug`:
 ![element导航的bug](https://file.lantingshucheng.com/blog/2018_01_04/bug.png/default)
@@ -33,7 +33,7 @@ handleItemClick(item) {
 
 可以看到`element`对于`activeIndex`值能否被赋值当前路由路径（`this.$route.path`）仅仅只检测`this.router`是否存在，也就是说路由在开始跳转的一瞬间，`active`值就已经被赋值为当前的路由路径，至于之后跳转是否完成`element`不会再做处理。如果一个组件内添加了`beforeRouteLeave`这样的组件内导航钩子，就有可能原先的路由跳转会被取消掉，页面停留在原页面，而这个时候`activeIndex`已经被修改，被点击的那个导航会加上`is-active`类，原先的那个页面的导航会去掉`is-active`类，这就出现上面那个`bug`。
 
-#### 解决方法
+### 解决方法
 
 出现问题基本都是无独有偶，这个是个歪果仁提的[element issue](https://github.com/ElemeFE/element/issues/8229)。然而很可惜，我找到这个`issue`并未提供任何的解决方案。只能靠自己了~
 

@@ -4,14 +4,14 @@ date: 2017-08-21 17:24:43
 tags: 同花顺
 ---
 
-#### 前言
+### 前言
 
 开发中我们经常会碰到这种需求---自定义弹窗，那么如何创建一个正确的弹窗呢？
 <img class="top-img" src="https://file.lantingshucheng.com/blog/images/modal.png/default" alt="弹出框" style="width: 70%;margin: 20px auto;" />
 
-#### 考虑的方面
+### 考虑的方面
 
-#### 1. 定位
+### 1. 定位
 
 弹窗一般都需要垂直水平居中，也许通过 flex 或者 transform 能够很快的实现垂直水平居中，但是 ie 下就炸了，下面我介绍一种垂直水平居中的技巧---使用三层 dom 来实现垂直水平居中
 

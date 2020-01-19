@@ -35,7 +35,7 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
 
 ### 选择文件
 
-#### 使用表单输入选择
+### 使用表单输入选择
 
 使用标准 `<input type="file">` 元素可以打开一个文件选择的弹窗，用户选择完文件之后 input 元素会得到一个 FileList 对象
 
@@ -69,7 +69,7 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
 
 点击这里查看[demo](https://codepen.io/Andyliwr/pen/LMPMEQ)
 
-#### 使用拖拽操作选择
+### 使用拖拽操作选择
 
 我们可以给元素添加 dragover 事件，如果拖动的是一个文件，就能在 event.dataTransfer.files 属性中拿到本次拖拽的图片
 
@@ -168,7 +168,7 @@ FileReader 包括四个异步读取文件的选项：
 ```
 点击这里查看[demo](https://codepen.io/Andyliwr/pen/dwojPx)
 
-#### 文件分割以及监控文件读取进度
+### 文件分割以及监控文件读取进度
 对于大文件的上传，可以使用File接口分割文件，然后分布上传到服务器，由服务器组件负责按正确顺序重建文件，此外使用onloadstart 和 onprogress 事件可用于监控读取进度，点击这里[查看详情](https://www.html5rocks.com/zh/tutorials/file/dndfiles/)
 
 ### 结束

@@ -6,11 +6,11 @@ tags:
  - mongodb
 ---
 
-#### 前言
+### 前言
 
 `wecomment`连接不上[`mlab`](http://mlab.com/)的免费 mongo 数据库，同样也连不上腾讯云服务器的 mongo 数据库，好气呀>\_<，只能花时间在 windows 上搭建一个本地 mongo 了，下面是我的踩坑历程，希望能帮到你~
 
-#### 开始
+### 开始
 
 1.  下载 mongo
     [官方网站下载地址](https://www.mongodb.com/download-center?jmp=nav#community)
@@ -37,7 +37,7 @@ mongod.exe --bind_ip localhost --logpath "D:\mongo\log\mongo.log" --logappend --
 
 然后使用小娜搜索“服务”，在本地服务列表中找到刚才新建的服务`“mongo”`, 右击点击“启动”就好了。最后在 cmd 中输入`mongo`就能进入`mongo`命令行模式了（注意如果 mongo 没有设置系统环境变量，请自行添加，或者每次切换到 mongo 的执行目录---`D:\mongo\bin`执行命令）。
 
-#### 如何创建表和用户
+### 如何创建表和用户
 
 在 mongo 命令行中执行以下命令
 
@@ -58,7 +58,7 @@ db.createUser({
 db.auth("admin", "123456")
 ```
 
-#### 常见问题
+### 常见问题
 
 1.  在安装完`mongo`启动 koa 项目的时候报`Authentication failed`错误
 

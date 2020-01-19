@@ -14,7 +14,7 @@ toc: true
 
 ### 服务器配置
 
-#### 创建 travis 管理员账号
+### 创建 travis 管理员账号
 
 ```
 #新建用户
@@ -28,7 +28,7 @@ sudo vim /etc/sudoers
 找到`#Allow root to run any commands anywhere`这一行，在下方添加`travis ALL=(ALL:ALL) ALL`
 编辑权限文件的时候如果出现保存不了的问题，可以输入`:wq!`强制保存
 
-#### 生成部署秘钥
+### 生成部署秘钥
 
 ```
 su travis
@@ -140,7 +140,7 @@ before_install:
 
 ### 编写登录服务器之后的代码
 
-#### 1. 复制本地文件到远程服务器
+### 1. 复制本地文件到远程服务器
 
 比如一个前端项目，在`npm run build`之后需要把打包的`dist`传到服务器的静态资源目录完成部署，这个时候就可以使用[`scp`](http://www.runoob.com/linux/linux-comm-scp.html)命令：
 
@@ -150,7 +150,7 @@ after_success:
  - scp -r dist/ travis@193.112.196.41:/var/www/admin
 ```
 
-#### 2. 登录远程服务器并执行写好的 shell 脚本
+### 2. 登录远程服务器并执行写好的 shell 脚本
 
 在 travis 目录下新建一个`deploy.sh`，执行如下命令：
 

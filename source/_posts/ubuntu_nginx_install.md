@@ -6,7 +6,7 @@ tags:
   - nginx
 ---
 
-#### 1. 安装 nginx 的依赖包
+### 1. 安装 nginx 的依赖包
 
 ```bash
 # 查看zlib是否安装
@@ -19,7 +19,7 @@ sudo apt-get install libpcre3 libpcre3-dev
 sudo apt-get install zlib1g-dev
 ```
 
-#### 2. 下载 nginx
+### 2. 下载 nginx
 
 访问[nginx 官网](http://nginx.org/en/download.html)，
 
@@ -34,7 +34,7 @@ mv nginx-1.13.1 nginx
 mv nginx/ /usr/local/
 ```
 
-#### 3. 安装 nginx
+### 3. 安装 nginx
 
 ```bash
 # 配置nginx
@@ -46,7 +46,7 @@ sudo make
 sudo make install
 ```
 
-#### 4. 检查 nginx 是否安装成功
+### 4. 检查 nginx 是否安装成功
 
 ```bash
 cd /usr/local/nginx/sbin
@@ -60,7 +60,7 @@ nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok
 nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 ```
 
-#### 5. 配置用户
+### 5. 配置用户
 
 ```bash
 # 添加www组
@@ -69,7 +69,7 @@ groupadd www
 useradd -g  www www -s /bin/false
 ```
 
-#### 6. 配置防火墙
+### 6. 配置防火墙
 
 如果是使用的腾讯服务器，只需要在服务器管理平台添加 80 端口的安全组就好
 ![腾讯云安全组](https://file.lantingshucheng.com/blog/tengxunyun.jpg/default)
@@ -84,7 +84,7 @@ vi + /etc/sysconfig/iptables
 service iptables restart
 ```
 
-#### 7. 启动 nginx
+### 7. 启动 nginx
 
 ```bash
 # 方法1
@@ -94,6 +94,6 @@ cd /usr/local/nginx/sbin
 ./nginx
 ```
 
-#### 传送门
+### 传送门
 
 [linux 公社一篇更加详细的教程](http://www.linuxidc.com/Linux/2016-08/134110.htm)

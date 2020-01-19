@@ -1,6 +1,6 @@
 ### 什么是神经网络？
 
-#### ReLU
+### ReLU
 
 ![修正线性单元](https://file.lantingshucheng.com/1526374086551.png)
 

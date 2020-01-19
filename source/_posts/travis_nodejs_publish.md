@@ -11,12 +11,12 @@ tags:
 
 下面来介绍如何为 GitHub 上托管的开源项目用 Travis CI 进行持续集成：
 
-#### travis 简介
+### travis 简介
 
 `Travis CI`是在线托管的 CI 服务，用`Travis`来进行持续集成，不需要自己搭服务器，在网页上点几下就好，用起来更方便。最重要的是，它对开源项目是免费的，而且天生对 github 项目友好，所以使用 travis 集成 githu 项目是最好不过了。
 [travis 官网](https://travis-ci.com/)，直接使用 github 登录，第一次登录之后需要对已有的 github 项目进行授权，你只需把你需要使用 travis 的项目打上勾就好了。默认情况下，travis 会在你 push 代码的时候会收到 github 的通知，然后为你执行部署的命令。
 
-#### 具体改怎么做
+### 具体改怎么做
 
 先讲下我的需求：博主一直使用`hexo`来写博客，并且想让自己的博客可以使用两个域名来访问---https://andyliwr.github.io以及http://www.andylistudio.com，andylistudio的域名是指向一台阿里云服务器，在服务器上使用`hexo server`启动了一个本地 3000 端口，并使用 nginx 转发到 80。那么现在来想一下在编写完一篇博客之后我们需要做的操作：
 
@@ -115,7 +115,7 @@ mkdir .travis && mv id_rsa.enc .travis/
 4.  **初始化完成**
     如此一个 travis 项目算是初始化好了，你可以执行一个代码`push`，然后去 travis 的官网看下持续集成是否执行成功了。
 
-#### 自定义 travis 的集成步骤
+### 自定义 travis 的集成步骤
 
 之前还是只初始化好了 travis，下面我来介绍如定义自定步骤：
 
@@ -162,7 +162,7 @@ script:
 
 **PS**：注意由于现在腾讯云服务器已经可以只用 ssh 秘钥访问 github 了所以在博客项目的`.config.yml`文件 deploy 里应该 ssh 地址我这里感觉还有些问题，直接将`id_rsa_travis`秘钥存储在了 github 项目上，那么别人如果拿到了这个秘钥就能对我的 github 做任意的修改。这个问题以后再修复吧~
 
-#### 更好的方式
+### 更好的方式
 
 之前说过我是将`id_rsa_travis`秘钥直接存放在了 github 项目中，这样很不安全。果然第二天就有人给我提了个`pull request`，让我删除这个秘钥。我一想不能呀，删除之后我怎么把代码推送到`Andyliwr.github.io`这个项目呢？
 ![Pull Request](https://img.vim-cn.com/f5/77548bb55f147b0891d1a7fb8bab96f9e0335e.png)
@@ -209,7 +209,7 @@ global:
   - GH_REF: github.com/Andyliwr/Andyliwr.github.io
 ```
 
-#### 结尾
+### 结尾
 
 其实如何登陆我的腾讯云服务器，帮我执行`git pull`启动，我还是不知道怎么做。不过本人其实打算放弃`andylistudio.com`的域名了，以后的博客域名就是用`andyliwr.github.io`吧~
 最后贴一张，`travis`部署的执行结果:

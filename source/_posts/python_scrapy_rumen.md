@@ -6,7 +6,7 @@ tags:
  - 毕设
 ---
 
-#### 前言
+### 前言
 
 有时候想法太多也不是个好事，最近想做的项目有三个：
 
@@ -17,7 +17,7 @@ tags:
 谈正题，讲下自己学习`scrapy`的过程，以及如何写一个爬虫。学习一个新框架最好的方法就是去看它的官网，初次打开`scrapy`的官网，眼前一亮，让自己瞬间但觉到要是能掌握这门武技就能变成无敌黑客。
 ![scrapy官网](http://ouizhbgin.bkt.clouddn.com/blog/2017/10/28/scrapy_office.png)
 
-#### 安装`scrapy`
+### 安装`scrapy`
 
 1.  **windows 下安装**
     python 安装包的时候依赖关系复杂，有时候存粹使用`pip install xxx`并不能安装成功，我们得找条捷径。参考官网给的安装教程，我选择了使用[anaconda](https://anaconda.org)。可是国内访问国外网站很慢，而且奇葩的时`anaconda`还很大，大概 400 多 M.。当我发现我睡了一觉起来还没有下载成功的时候，果断点击了`取消下载`。这里给大家推荐两个镜像： + 清华大学`anaconda`镜像 --- [https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)，如不能访问，请使用下面一个清华大学镜像还给了个替换`corda`下载源的方法，我试了下确实安装依赖速度上提升不少
@@ -34,7 +34,7 @@ tags:
 sudo ./xxx.sh
 ```
 
-#### `scrapy`创建以及运行项目
+### `scrapy`创建以及运行项目
 
 创建项目，在终端中输入`scrapy startproject first_spider`，创建完成之后项目结构如下：
 
