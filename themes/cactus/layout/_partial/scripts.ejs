@@ -1,7 +1,7 @@
 <!-- jquery -->
-<%- js('lib/jquery/jquery.min') %>
-<%- js('lib/justified-gallery/js/jquery.justifiedGallery.min.js') %>
-<%- js('lib/fancybox/jquery.fancybox.pack') %>
+<%- js('https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js') %>
+<%- js('https://cdn.bootcss.com/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js') %>
+<%- js('https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js') %>
 <% if(theme.gitalk.enabled){ %>
 <script type="text/javascript" src="https://file.lantingshucheng.com/blog/v3/static/scripts/md5.js"></script>
 <script type="text/javascript" src="https://file.lantingshucheng.com/blog/v3/static/scripts/gitalk.min.js"></script>
@@ -84,18 +84,16 @@
 <% if (theme.gitalk.enabled){ %>
   <script type="text/javascript">
     window.onload = function(){
-      if (window.location.href.indexOf('andyliwr.github.io') > -1) {
-        var gitalk = new Gitalk({
-          clientID: 'ad6f70df0c70d2b715f9',
-          clientSecret: '40384bee244c1e17dd7c37733d21e9ef669e969c',
-          repo: 'Andyliwr.github.io',
-          owner: 'Andyliwr',
-          admin: ['Andyliwr'],
-          id: md5(location.pathname),
-          distractionFreeMode: 'true'
-        })
-        gitalk.render('gitalk_thread')
-      }
+      var gitalk = new Gitalk({
+        clientID: 'ad6f70df0c70d2b715f9',
+        clientSecret: '40384bee244c1e17dd7c37733d21e9ef669e969c',
+        repo: 'Andyliwr.github.io',
+        owner: 'Andyliwr',
+        admin: ['Andyliwr'],
+        id: md5(location.pathname),
+        distractionFreeMode: 'true'
+      })
+      gitalk.render('gitalk_thread')
     }
   </script>
 <% } %>
