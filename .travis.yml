@@ -13,7 +13,7 @@ install:
 
 script:
   - npm run build
-  - node bin/cdnify.js
+  - node ./bin/cdnify.js
 
 after_script:
   - cd ./public
