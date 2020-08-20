@@ -1,0 +1,29 @@
+language:
+  - node_js
+node_js:
+  - stable
+
+branches:
+  only:
+    - master
+
+install:
+  - npm install vuepress -g
+  - npm install
+
+script:
+  - npm run build
+  - node bin/cdnify.js
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "andyliwr"
+  - git config user.email "andyliwr@outlook.com"
+  - git add .
+  - git commit -m "Update blog"
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master
+
+env:
+  global:
+    - GH_REF: github.com/Andyliwr/Andyliwr.github.io
