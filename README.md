@@ -1,18 +1,19 @@
 ---
 home: true
-heroText: vuepress-theme-reco
-tagline: A simple and beautiful vuepress blog theme.
-# heroImage: /hero.png
-# heroImageStyle: {
-#   maxWidth: '600px',
-#   width: '100%',
-#   display: block,
-#   margin: '9rem auto 2rem',
-#   background: '#fff',
-#   borderRadius: '1rem',
-# }
+heroText: 月光倾城的代码小屋
+tagline: 站在阳光中就能看见太阳
+heroImage: /background.jpg
+heroImageStyle: {
+  maxWidth: '600px',
+  width: '100%',
+  display: block,
+  margin: '9rem auto 2rem',
+  background: '#fff',
+  borderRadius: '1rem',
+}
+# bgImage: '/background.jpg'
 bgImageStyle: {
-  height: '450px'
+  height: '600px'
 }
 isShowTitleInHome: false
 actionText: Guide
