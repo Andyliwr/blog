@@ -78,7 +78,6 @@ Promise.all(promiseArr)
     deepTraverseDir(
       indexPath,
       (filePath) => {
-        console.log('Debug: filePath', filePath)
         if (filePath.indexOf('.html') > -1) {
           let content = fs.readFileSync(filePath, 'utf-8')
           fileMap.forEach(item => {
