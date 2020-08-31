@@ -32,7 +32,7 @@ datadir=D:\mysql\data
 ```
 
 3.  配置`mysql`的`bin\`目录到**系统环境变量**，并重启计算机
-![系统环境变量](http://ouizhbgin.bkt.clouddn.com/blog/2017/10/30/mysql_system_path.png)
+    ![系统环境变量](http://ouizhbgin.bkt.clouddn.com/blog/2017/10/30/mysql_system_path.png)
 
 4.  以管理员身份运行**cmd**，并输入以下代码
 
@@ -65,7 +65,8 @@ More help is available by typing NET HELPMSG 3534.
 - [教你怎么在`windows server 2008`的服务器上搭建 mysql 数据库](http://blog.csdn.net/u014374031/article/details/49253135)
 - [MYSQL 授权管理](http://blog.csdn.net/u014374031/article/details/45484105)
 
-注意新版的mysql已经将password从user表中移除了，修改密码请使用以下代码
+注意新版的 mysql 已经将 password 从 user 表中移除了，修改密码请使用以下代码
+
 ```shell
 use mysql
 update user set authentication_string=PASSWORD('123456') where user="root";
